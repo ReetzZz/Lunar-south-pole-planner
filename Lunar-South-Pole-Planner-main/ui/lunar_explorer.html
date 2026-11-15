@@ -1,0 +1,149 @@
+<!-- Last updated: 2026-11-14 -->
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lunar South Pole — 3D Mission Control</title>
+<script src="/plotly.min.js"></script>
+<script type="module" src="/vendor/model-viewer.min.js"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#061019;color:#d9edf7;font:14px system-ui,sans-serif}
+header{height:60px;padding:12px 20px;background:#091722;border-bottom:1px solid #1d4053;display:flex;align-items:center;justify-content:space-between}
+header strong{letter-spacing:2px;color:#69f0ff}
+main{display:grid;grid-template-columns:230px minmax(0,1fr);height:calc(100vh - 88px)}
+aside{padding:16px;background:#0b1a27;border-right:1px solid #1d4053;overflow:auto}
+label{display:block;color:#85a5b7;margin:14px 0 6px}
+select,button{width:100%;padding:10px;margin-bottom:7px;background:#102737;color:#d9edf7;border:1px solid #1d4053;border-radius:5px}
+button{cursor:pointer}
+button:hover{border-color:#69f0ff}
+#scene{height:100%;min-height:0;display:none}
+#moonModel{width:100%;height:100%;min-height:400px;background:radial-gradient(ellipse at center,#172938 0%,#03070c 75%);display:block;--poster-color:transparent}
+#moonModel::part(default-progress-bar){background:#69f0ff}
+#status{font-size:12px;line-height:1.6;color:#85a5b7;overflow-wrap:anywhere}
+footer{height:28px;padding:6px 12px;border-top:1px solid #1d4053;color:#85a5b7;font-size:10px}
+@media(max-width:650px){main{grid-template-columns:155px minmax(0,1fr)}aside{padding:8px}}
+</style>
+</head>
+<body>
+<header>
+<strong>LUNAR SOUTH POLE / MISSION CONTROL</strong>
+<span id="mode">GLOBAL 3D</span>
+</header>
+<main>
+<aside>
+<label for="site">Sito candidato</label>
+<select id="site"></select>
+<button id="focus">Seleziona e centra sito</button>
+<label for="dem">Modello altimetrico</label>
+<select id="dem"></select>
+<button id="terrain">Esplora terreno 3D</button>
+<button id="globe">Vista globale</button>
+<button id="astro">Carica dati astronomici</button>
+<hr style="border-color:#1d4053">
+<div id="status">Inizializzazione…</div>
+</aside>
+<model-viewer id="moonModel"
+  src="/assets/moon.glb"
+  alt="Luna tridimensionale NASA LRO con topografia"
+  camera-controls auto-rotate rotation-per-second="2deg"
+  shadow-intensity="1" exposure="0.9"
+  interaction-prompt="auto" loading="eager"
+  environment-image="neutral">
+</model-viewer>
+<div id="scene"></div>
+</main>
+<footer>Vista globale di riferimento e DEM locali; registrazione geografica e interpretazione scientifica da validare.</footer>
+<script>
+const $=id=>document.getElementById(id);
+let sites=[], globe=null, active=null, mode="globe";
+
+async function api(url){
+  const r=await fetch(url);
+  const d=await r.json();
+  if(!r.ok || d.error) throw Error(d.error||r.statusText);
+  return d;
+}
+function status(s){$("status").textContent=s;}
+async function draw(fig){
+  const f=JSON.parse(fig);
+  await Plotly.react("scene",f.data,f.layout,{responsive:true,scrollZoom:true,displaylogo:false});
+}
+async function showGlobe(){
+  const model = $("moonModel");
+  if (!model) {
+    status("Errore: visualizzatore NASA non presente nell'HTML.");
+    return;
+  }
+
+  $("scene").style.display = "none";
+  model.style.display = "block";
+  mode = "globe";
+  $("mode").textContent = "NASA LRO / 3D TOPOGRAPHY";
+  status("Caricamento del modello NASA LRO: attendi il caricamento iniziale. "
+    + "Trascina per ruotare e usa la rotella per lo zoom. "
+    + "La registrazione geografica dei siti non è ancora verificata.");
+}
+
+async function showTerrain(){
+  status("Caricamento del DEM locale…");
+  try {
+    const d = await api("/api/terrain?dataset=" +
+      encodeURIComponent($("dem").value));
+
+    $("moonModel").style.display = "none";
+    $("scene").style.display = "block";
+
+    const f = JSON.parse(d.figure);
+    await Plotly.react("scene", f.data, f.layout, {
+      responsive: true, scrollZoom: true, displaylogo: false
+    });
+
+    mode = "terrain";
+    $("mode").textContent = "LOCAL TERRAIN 3D — " + d.dataset;
+    status(d.file + " | griglia " + d.dimensions.join(" × ") +
+      " | CRS: " + (d.crs || "non dichiarato") +
+      ". " + (d.reference_warning || "Registrazione geografica da validare."));
+  } catch(e) {
+    status("Errore DEM: " + e.message);
+  }
+}
+
+async function init(){
+  try{
+    const d=await api("/api/sites");
+    sites=d.sites;
+    $("site").innerHTML=sites.map(s=>`<option>${s.name}</option>`).join("");
+    $("dem").innerHTML=d.datasets.map(s=>`<option>${s}</option>`).join("");
+    active=sites[0];
+    await showGlobe();
+  }catch(e){status("Inizializzazione fallita: "+e.message);}
+}
+$("site").onchange=()=>{active=sites.find(s=>s.name===$("site").value);};
+$("focus").onclick=async()=>{
+  if (!active) return;
+  if (mode !== "globe") await showGlobe();
+  status("Sito selezionato: " + active.name + " (" +
+    active.lat.toFixed(4) + "°, " + active.lon.toFixed(4) +
+    "°). Il centraggio automatico sarà attivato dopo la verifica "
+    + "dell'orientamento e delle coordinate del modello NASA.");
+};
+$("terrain").onclick=showTerrain;
+$("globe").onclick=showGlobe;
+$("astro").onclick=async()=>{
+  if(!active)return;
+  status("Richiesta osservazioni astronomiche…");
+  try{
+    const d=await api("/api/astronomy?site="+encodeURIComponent(active.name)+"&hours=48");
+    const rows=[["SOLE",d.sun],["TERRA",d.earth]].map(([name,rs])=>
+      name+"\n"+rs.slice(0,8).map(r=>r.time_utc+" | elevazione "+r.elevation_deg.toFixed(2)+"°").join("\n")
+    ).join("\n\n");
+    status(rows+"\n\n"+d.warning);
+  }catch(e){status("Errore astronomico: "+e.message);}
+};
+window.addEventListener("resize",()=>{if($("scene").data)Plotly.Plots.resize("scene");});
+init();
+</script>
+</body>
+</html>

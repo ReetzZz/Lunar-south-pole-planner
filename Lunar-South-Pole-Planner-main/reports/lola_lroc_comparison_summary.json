@@ -1,0 +1,26 @@
+{
+  "comparison": "LOLA minus LROC resampled to LOLA grid",
+  "lola_file": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "lroc_file": "data/terrain/reference-lroc/NAC_DTM_ESALL_SR12.TIF",
+  "resampling": "bilinear",
+  "crs_definitions_identical": false,
+  "geodetic_alignment_validated": false,
+  "valid_common_pixels": 690057,
+  "bias_m": -0.7512161972451019,
+  "mae_m": 0.9544337222599626,
+  "rmse_m": 2.8737388890294753,
+  "p95_absolute_difference_m": 2.3291015625,
+  "min_difference_m": -477.157470703125,
+  "max_difference_m": 145.28521728515625,
+  "correlation": 0.9999312434111843,
+  "warnings": [
+    "Confronto diagnostico: il CRS LOLA e quello LROC non sono identici.",
+    "La riproiezione usa le definizioni CRS dichiarate nei file.",
+    "Somiglianza delle quote e correlazione non dimostrano allineamento geodetico.",
+    "Le differenze comprendono anche risoluzione, interpolazione e caratteristiche dei dataset."
+  ],
+  "outputs": [
+    "reports/lola_lroc_difference_map.png",
+    "reports/lola_lroc_difference_histogram.png"
+  ]
+}

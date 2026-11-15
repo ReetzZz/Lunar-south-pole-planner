@@ -1,0 +1,5831 @@
+{
+  "schema": "lunar-site-selection/1.0",
+  "generated_utc": "2026-10-27T17:42:01.402566+00:00",
+  "status": "preliminary",
+  "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "dem_grid": {
+    "width": 3200,
+    "height": 3200,
+    "crs": "PROJCS[\"unnamed\",GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",1737400,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH]]",
+    "bounds": {
+      "left": -9000.0,
+      "bottom": -15000.0,
+      "right": 7000.0,
+      "top": 1000.0
+    }
+  },
+  "sampling": {
+    "method": "regular_grid_with_adaptive_step",
+    "step_pixels": 159,
+    "radius_pixels": 10,
+    "target_candidates": 400,
+    "evaluated_candidates": 400
+  },
+  "thresholds": {
+    "max_slope_deg": 15.0,
+    "max_roughness_m": 5.0,
+    "min_valid_fraction": 0.95
+  },
+  "ranking_method": "Score 0-100 based only on slope and roughness, with weights 0.60 and 0.40.",
+  "eligible_count": 87,
+  "rejected_count": 313,
+  "top_candidates": [
+    {
+      "name": "candidate_r2872_c964",
+      "grid_row": 2872,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 5.15079372607353,
+        "roughness_plane_residual_std_m": 0.657111310981842,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2872_c964",
+        "score_0_100": 74.14,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 65.66,
+          "roughness": 86.86
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c646",
+      "grid_row": 2236,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 5.342663306185125,
+        "roughness_plane_residual_std_m": 0.5686234049640715,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2236_c646",
+        "score_0_100": 74.08,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 64.38,
+          "roughness": 88.63
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c328",
+      "grid_row": 2554,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 5.789808218780122,
+        "roughness_plane_residual_std_m": 0.4210721891116625,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2554_c328",
+        "score_0_100": 73.47,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 61.4,
+          "roughness": 91.58
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c328",
+      "grid_row": 1441,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.395769706815884,
+        "roughness_plane_residual_std_m": 0.4521544649379739,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1441_c328",
+        "score_0_100": 70.8,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 57.36,
+          "roughness": 90.96
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c169",
+      "grid_row": 1282,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.741738282641779,
+        "roughness_plane_residual_std_m": 0.29726744056530435,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1282_c169",
+        "score_0_100": 70.65,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 55.06,
+          "roughness": 94.05
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c1123",
+      "grid_row": 2872,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.249945293031361,
+        "roughness_plane_residual_std_m": 0.579547793634871,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2872_c1123",
+        "score_0_100": 70.36,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 58.33,
+          "roughness": 88.41
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c169",
+      "grid_row": 2713,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.698090321949177,
+        "roughness_plane_residual_std_m": 0.4757457892201912,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2713_c169",
+        "score_0_100": 69.4,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 55.35,
+          "roughness": 90.49
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c328",
+      "grid_row": 2395,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.425317382856243,
+        "roughness_plane_residual_std_m": 0.6581506567303275,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r2395_c328",
+        "score_0_100": 69.03,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 57.16,
+          "roughness": 86.84
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c3031",
+      "grid_row": 1282,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 6.980377896906258,
+        "roughness_plane_residual_std_m": 0.38963335302388596,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1282_c3031",
+        "score_0_100": 68.96,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 53.46,
+          "roughness": 92.21
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r964_c328",
+      "grid_row": 964,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 7.742191654411913,
+        "roughness_plane_residual_std_m": 0.34640350096914646,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r964_c328",
+        "score_0_100": 66.26,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 48.39,
+          "roughness": 93.07
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c3031",
+      "grid_row": 1123,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 7.8206419653636345,
+        "roughness_plane_residual_std_m": 0.4411485009624511,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1123_c3031",
+        "score_0_100": 65.19,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 47.86,
+          "roughness": 91.18
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c3031",
+      "grid_row": 1441,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 8.347552000703562,
+        "roughness_plane_residual_std_m": 0.25791244344939,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1441_c3031",
+        "score_0_100": 64.55,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 44.35,
+          "roughness": 94.84
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c328",
+      "grid_row": 1123,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 8.23143358573447,
+        "roughness_plane_residual_std_m": 0.4815718808241099,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1123_c328",
+        "score_0_100": 63.22,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 45.12,
+          "roughness": 90.37
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c10",
+      "grid_row": 1600,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 8.276993480075328,
+        "roughness_plane_residual_std_m": 0.5638930564595666,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1600_c10",
+        "score_0_100": 62.38,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 44.82,
+          "roughness": 88.72
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1918",
+      "grid_row": 10,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 7.603381020874628,
+        "roughness_plane_residual_std_m": 0.9476402877683227,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r10_c1918",
+        "score_0_100": 62.01,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 49.31,
+          "roughness": 81.05
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1282",
+      "grid_row": 1282,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 7.287723824483131,
+        "roughness_plane_residual_std_m": 1.1311796254036317,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1282_c1282",
+        "score_0_100": 61.8,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 51.42,
+          "roughness": 77.38
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c10",
+      "grid_row": 1282,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 8.485111071579404,
+        "roughness_plane_residual_std_m": 0.5624645758392418,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1282_c10",
+        "score_0_100": 61.56,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 43.43,
+          "roughness": 88.75
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r964_c169",
+      "grid_row": 964,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 8.180759987084159,
+        "roughness_plane_residual_std_m": 0.7482497925532368,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r964_c169",
+        "score_0_100": 61.29,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 45.46,
+          "roughness": 85.04
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c169",
+      "grid_row": 1759,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 9.063608848407691,
+        "roughness_plane_residual_std_m": 0.3776485223907501,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1759_c169",
+        "score_0_100": 60.72,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 39.58,
+          "roughness": 92.45
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c169",
+      "grid_row": 1123,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 9.02568814275781,
+        "roughness_plane_residual_std_m": 0.4926400838254213,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": true,
+      "exclusion_reasons": [],
+      "score": {
+        "name": "candidate_r1123_c169",
+        "score_0_100": 59.96,
+        "coverage_fraction": 1.0,
+        "components_0_100": {
+          "slope": 39.83,
+          "roughness": 90.15
+        },
+        "missing_metrics": [
+          "illumination",
+          "communications",
+          "confidence"
+        ],
+        "notes": ""
+      },
+      "score_coverage_fraction": 1.0,
+      "missing_metrics": [
+        "illumination",
+        "communications",
+        "confidence"
+      ],
+      "score_scope": [
+        "slope",
+        "roughness"
+      ]
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "name": "candidate_r10_c10",
+      "grid_row": 10,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 25.05844132529401,
+        "roughness_plane_residual_std_m": 1.7576252906698626,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c169",
+      "grid_row": 10,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.500411546309426,
+        "roughness_plane_residual_std_m": 0.693814743728051,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c646",
+      "grid_row": 10,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.201278695856693,
+        "roughness_plane_residual_std_m": 0.7881186635821777,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c964",
+      "grid_row": 10,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.36319179042807,
+        "roughness_plane_residual_std_m": 0.9984908065001126,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1123",
+      "grid_row": 10,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.007312077024945,
+        "roughness_plane_residual_std_m": 0.7766374686408736,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1282",
+      "grid_row": 10,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.460233513153955,
+        "roughness_plane_residual_std_m": 1.0863331781565404,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1441",
+      "grid_row": 10,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.537575104850536,
+        "roughness_plane_residual_std_m": 1.1786813283374942,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1600",
+      "grid_row": 10,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.86495255045153,
+        "roughness_plane_residual_std_m": 1.0256850029796658,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c1759",
+      "grid_row": 10,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.63181375661426,
+        "roughness_plane_residual_std_m": 0.5455659737267922,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2077",
+      "grid_row": 10,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.767716592139195,
+        "roughness_plane_residual_std_m": 1.5450343246970655,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2236",
+      "grid_row": 10,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.32643677452176,
+        "roughness_plane_residual_std_m": 1.4723619739459781,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2395",
+      "grid_row": 10,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.90054111658177,
+        "roughness_plane_residual_std_m": 1.6187004620674188,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2554",
+      "grid_row": 10,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.21149782586843,
+        "roughness_plane_residual_std_m": 1.5654446897354755,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2713",
+      "grid_row": 10,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 38.41218064571471,
+        "roughness_plane_residual_std_m": 2.1825017040563783,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c2872",
+      "grid_row": 10,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.28101590415425,
+        "roughness_plane_residual_std_m": 1.5246632285781911,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r10_c3031",
+      "grid_row": 10,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": 947.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.63376157788315,
+        "roughness_plane_residual_std_m": 1.7068235394185376,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c10",
+      "grid_row": 169,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 25.70752668149719,
+        "roughness_plane_residual_std_m": 1.7980688654605232,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c169",
+      "grid_row": 169,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.84516611357171,
+        "roughness_plane_residual_std_m": 0.5289808022136974,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c328",
+      "grid_row": 169,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.384848272556276,
+        "roughness_plane_residual_std_m": 0.5709254616880017,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c487",
+      "grid_row": 169,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.068565991043233,
+        "roughness_plane_residual_std_m": 0.542847598035602,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c646",
+      "grid_row": 169,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.025565318078144,
+        "roughness_plane_residual_std_m": 0.4154425454950028,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c805",
+      "grid_row": 169,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.66226498038332,
+        "roughness_plane_residual_std_m": 0.523533606688637,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c964",
+      "grid_row": 169,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.586674220657738,
+        "roughness_plane_residual_std_m": 0.44090290424836315,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1123",
+      "grid_row": 169,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.172617393324842,
+        "roughness_plane_residual_std_m": 0.40698459136775533,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1282",
+      "grid_row": 169,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 27.798420009054887,
+        "roughness_plane_residual_std_m": 1.0124182216349307,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1441",
+      "grid_row": 169,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.704569594459553,
+        "roughness_plane_residual_std_m": 1.2001446714604502,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1600",
+      "grid_row": 169,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.459098996241757,
+        "roughness_plane_residual_std_m": 0.7153056927313088,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1759",
+      "grid_row": 169,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.911345721253607,
+        "roughness_plane_residual_std_m": 0.7282255414838226,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c1918",
+      "grid_row": 169,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.88664432542564,
+        "roughness_plane_residual_std_m": 2.3691468147498167,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2077",
+      "grid_row": 169,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.794758193672855,
+        "roughness_plane_residual_std_m": 1.7705505030566684,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2236",
+      "grid_row": 169,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.38579314420949,
+        "roughness_plane_residual_std_m": 1.0895198373524044,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2395",
+      "grid_row": 169,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.52723181064481,
+        "roughness_plane_residual_std_m": 0.6471184584762533,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2554",
+      "grid_row": 169,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.85012677205579,
+        "roughness_plane_residual_std_m": 0.5941859637917638,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2713",
+      "grid_row": 169,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.189338344849375,
+        "roughness_plane_residual_std_m": 0.6642677315507635,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c2872",
+      "grid_row": 169,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.51219743775226,
+        "roughness_plane_residual_std_m": 1.2208059856363513,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r169_c3031",
+      "grid_row": 169,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": 152.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.407924370250576,
+        "roughness_plane_residual_std_m": 0.7050038432863398,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c10",
+      "grid_row": 328,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.001392693183256,
+        "roughness_plane_residual_std_m": 1.0213045990717464,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c169",
+      "grid_row": 328,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.319299809759972,
+        "roughness_plane_residual_std_m": 0.5999548530227851,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c328",
+      "grid_row": 328,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.384047031653036,
+        "roughness_plane_residual_std_m": 0.5016176723368414,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c487",
+      "grid_row": 328,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.44127758636504,
+        "roughness_plane_residual_std_m": 0.5961604451357673,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c646",
+      "grid_row": 328,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.612349580729843,
+        "roughness_plane_residual_std_m": 0.798315709947287,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c805",
+      "grid_row": 328,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.076076518946373,
+        "roughness_plane_residual_std_m": 0.4710078229326713,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c964",
+      "grid_row": 328,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.681826679348543,
+        "roughness_plane_residual_std_m": 0.5929185608867137,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1123",
+      "grid_row": 328,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.14904235150481,
+        "roughness_plane_residual_std_m": 0.7746305579054364,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1282",
+      "grid_row": 328,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.202474414801106,
+        "roughness_plane_residual_std_m": 0.9561721619833453,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1441",
+      "grid_row": 328,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.268843067904506,
+        "roughness_plane_residual_std_m": 0.761122338930996,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1600",
+      "grid_row": 328,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.372129931956994,
+        "roughness_plane_residual_std_m": 0.5737381556861875,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1759",
+      "grid_row": 328,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.493486281548716,
+        "roughness_plane_residual_std_m": 2.7242540914957973,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c1918",
+      "grid_row": 328,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.172973422676456,
+        "roughness_plane_residual_std_m": 1.0483382547642774,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2077",
+      "grid_row": 328,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.4215898597983,
+        "roughness_plane_residual_std_m": 1.334653407776058,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2236",
+      "grid_row": 328,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 39.41267296416367,
+        "roughness_plane_residual_std_m": 1.2661899244921326,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2395",
+      "grid_row": 328,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.75838188797076,
+        "roughness_plane_residual_std_m": 0.6934630813300242,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2554",
+      "grid_row": 328,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.3117521944462,
+        "roughness_plane_residual_std_m": 1.0147564343102553,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2713",
+      "grid_row": 328,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.79628915922249,
+        "roughness_plane_residual_std_m": 0.9865132816143664,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c2872",
+      "grid_row": 328,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 39.50622665268401,
+        "roughness_plane_residual_std_m": 0.8942404044526125,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r328_c3031",
+      "grid_row": 328,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -642.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.88935249955341,
+        "roughness_plane_residual_std_m": 0.9179384991351891,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c10",
+      "grid_row": 487,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.58413506423031,
+        "roughness_plane_residual_std_m": 0.9925172752940017,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c169",
+      "grid_row": 487,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.403882731306973,
+        "roughness_plane_residual_std_m": 0.7229426719549097,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c487",
+      "grid_row": 487,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.931816279469032,
+        "roughness_plane_residual_std_m": 0.3548087773996192,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c805",
+      "grid_row": 487,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.145864350468816,
+        "roughness_plane_residual_std_m": 1.3167101828260317,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c964",
+      "grid_row": 487,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 25.385362981196838,
+        "roughness_plane_residual_std_m": 0.7277670266990053,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c1123",
+      "grid_row": 487,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.780567837881165,
+        "roughness_plane_residual_std_m": 0.722399312648726,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c1282",
+      "grid_row": 487,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.0785175170839,
+        "roughness_plane_residual_std_m": 0.6215698213341403,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c1441",
+      "grid_row": 487,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.44924732504615,
+        "roughness_plane_residual_std_m": 1.1018080650217337,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c1759",
+      "grid_row": 487,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.402120818901064,
+        "roughness_plane_residual_std_m": 0.800688298275564,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c1918",
+      "grid_row": 487,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.54133380087721,
+        "roughness_plane_residual_std_m": 0.6129204981291029,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2077",
+      "grid_row": 487,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.57615669150731,
+        "roughness_plane_residual_std_m": 1.3464194771406222,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2236",
+      "grid_row": 487,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.32606649847895,
+        "roughness_plane_residual_std_m": 0.8660784739729872,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2395",
+      "grid_row": 487,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.87834853546246,
+        "roughness_plane_residual_std_m": 1.0103498874047627,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2554",
+      "grid_row": 487,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.30255929541408,
+        "roughness_plane_residual_std_m": 0.744100436192868,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2713",
+      "grid_row": 487,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.52227909788708,
+        "roughness_plane_residual_std_m": 0.9367846155339887,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c2872",
+      "grid_row": 487,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 39.75427504863489,
+        "roughness_plane_residual_std_m": 1.2603995982265492,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r487_c3031",
+      "grid_row": 487,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -1437.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.3020383238851,
+        "roughness_plane_residual_std_m": 0.6710395821266676,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c10",
+      "grid_row": 646,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.68885055723919,
+        "roughness_plane_residual_std_m": 1.4944974165385416,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c487",
+      "grid_row": 646,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.311545411759212,
+        "roughness_plane_residual_std_m": 0.8725582399469229,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c805",
+      "grid_row": 646,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.012617890826906,
+        "roughness_plane_residual_std_m": 0.6323867887524378,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c964",
+      "grid_row": 646,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.343381481953482,
+        "roughness_plane_residual_std_m": 0.5644208341125141,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1123",
+      "grid_row": 646,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 25.66114654139172,
+        "roughness_plane_residual_std_m": 0.9368914328936114,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1282",
+      "grid_row": 646,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.497663414594378,
+        "roughness_plane_residual_std_m": 0.6857685567794514,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1441",
+      "grid_row": 646,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.703940376194183,
+        "roughness_plane_residual_std_m": 2.1760937943308196,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1600",
+      "grid_row": 646,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.827952807702374,
+        "roughness_plane_residual_std_m": 1.2464057683310479,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1759",
+      "grid_row": 646,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.353702904459734,
+        "roughness_plane_residual_std_m": 0.7591276039598356,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c1918",
+      "grid_row": 646,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.70527058948782,
+        "roughness_plane_residual_std_m": 0.6827771597024948,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2077",
+      "grid_row": 646,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.06595449423715,
+        "roughness_plane_residual_std_m": 0.6274247385803674,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2236",
+      "grid_row": 646,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.031608577794515,
+        "roughness_plane_residual_std_m": 0.98602144786073,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2395",
+      "grid_row": 646,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.74029099943161,
+        "roughness_plane_residual_std_m": 0.9405896054677377,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2554",
+      "grid_row": 646,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.0598087332377,
+        "roughness_plane_residual_std_m": 0.62253399793317,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2713",
+      "grid_row": 646,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.455244440791496,
+        "roughness_plane_residual_std_m": 0.8952880541763779,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c2872",
+      "grid_row": 646,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.22230115200099,
+        "roughness_plane_residual_std_m": 0.7397911207953575,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r646_c3031",
+      "grid_row": 646,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -2232.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.04790761607922,
+        "roughness_plane_residual_std_m": 0.8197538693987234,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c487",
+      "grid_row": 805,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.38445593078931,
+        "roughness_plane_residual_std_m": 0.7201989131531462,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c646",
+      "grid_row": 805,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.417573458058854,
+        "roughness_plane_residual_std_m": 0.37400137796743016,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c805",
+      "grid_row": 805,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.858464749965115,
+        "roughness_plane_residual_std_m": 0.602683251280171,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c964",
+      "grid_row": 805,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.553023198822864,
+        "roughness_plane_residual_std_m": 0.5014317622251988,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1123",
+      "grid_row": 805,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.615106178353926,
+        "roughness_plane_residual_std_m": 0.4202455965102153,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1282",
+      "grid_row": 805,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.987218139837477,
+        "roughness_plane_residual_std_m": 0.7578933598713528,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1441",
+      "grid_row": 805,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.997579344045192,
+        "roughness_plane_residual_std_m": 1.6704816108331977,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1600",
+      "grid_row": 805,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.644596908422443,
+        "roughness_plane_residual_std_m": 1.2643762344016791,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1759",
+      "grid_row": 805,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.211072123932865,
+        "roughness_plane_residual_std_m": 0.5888520999817972,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c1918",
+      "grid_row": 805,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.25337163298301,
+        "roughness_plane_residual_std_m": 0.7454747832902834,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2077",
+      "grid_row": 805,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.907923917481305,
+        "roughness_plane_residual_std_m": 0.9217996422304041,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2236",
+      "grid_row": 805,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.55472875399915,
+        "roughness_plane_residual_std_m": 0.8996632224847616,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2395",
+      "grid_row": 805,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.23359981936178,
+        "roughness_plane_residual_std_m": 1.1426425189744729,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2554",
+      "grid_row": 805,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.194958643245606,
+        "roughness_plane_residual_std_m": 0.8488565216969124,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2713",
+      "grid_row": 805,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.29273369094218,
+        "roughness_plane_residual_std_m": 0.7035049894112446,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c2872",
+      "grid_row": 805,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.20650348492358,
+        "roughness_plane_residual_std_m": 0.7432422371973924,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r805_c3031",
+      "grid_row": 805,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -3027.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.85815132879784,
+        "roughness_plane_residual_std_m": 0.5663238394912804,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c646",
+      "grid_row": 964,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.046723906914014,
+        "roughness_plane_residual_std_m": 0.5725896254560511,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c805",
+      "grid_row": 964,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.75044347153047,
+        "roughness_plane_residual_std_m": 0.5906880936400702,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c964",
+      "grid_row": 964,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.137141525193677,
+        "roughness_plane_residual_std_m": 0.426586860322426,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1123",
+      "grid_row": 964,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.007246608712503,
+        "roughness_plane_residual_std_m": 1.0322079729269937,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1282",
+      "grid_row": 964,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.899205714518946,
+        "roughness_plane_residual_std_m": 0.8104230789834341,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1441",
+      "grid_row": 964,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 30.709102170985172,
+        "roughness_plane_residual_std_m": 0.6372516987893031,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1600",
+      "grid_row": 964,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.94688988830557,
+        "roughness_plane_residual_std_m": 0.6829644398963894,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1759",
+      "grid_row": 964,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.269483124797645,
+        "roughness_plane_residual_std_m": 0.842725890416965,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c1918",
+      "grid_row": 964,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.84942569124571,
+        "roughness_plane_residual_std_m": 0.7687169099021497,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2077",
+      "grid_row": 964,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.89837938141159,
+        "roughness_plane_residual_std_m": 0.7591357920518014,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2236",
+      "grid_row": 964,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.78937205637733,
+        "roughness_plane_residual_std_m": 0.7672073177450136,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2395",
+      "grid_row": 964,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.06927552581976,
+        "roughness_plane_residual_std_m": 0.42004502383417747,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2554",
+      "grid_row": 964,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.67308060409234,
+        "roughness_plane_residual_std_m": 1.3704475867033798,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2713",
+      "grid_row": 964,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.99939949839842,
+        "roughness_plane_residual_std_m": 0.8158796031527102,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c2872",
+      "grid_row": 964,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.58769907281241,
+        "roughness_plane_residual_std_m": 0.6134368314478674,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r964_c3031",
+      "grid_row": 964,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -3822.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.4641178241516,
+        "roughness_plane_residual_std_m": 0.5057686940912933,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c10",
+      "grid_row": 1123,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.363249349668585,
+        "roughness_plane_residual_std_m": 0.9429516915027415,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c646",
+      "grid_row": 1123,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.658502172676158,
+        "roughness_plane_residual_std_m": 0.4966458204293797,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c805",
+      "grid_row": 1123,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.5524980997289,
+        "roughness_plane_residual_std_m": 0.7377189639644439,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c964",
+      "grid_row": 1123,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.79045236778616,
+        "roughness_plane_residual_std_m": 0.45102748858591385,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c1123",
+      "grid_row": 1123,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.323602121497228,
+        "roughness_plane_residual_std_m": 0.9709009738332455,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c1441",
+      "grid_row": 1123,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.26918871064575,
+        "roughness_plane_residual_std_m": 1.0212287820713024,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c1600",
+      "grid_row": 1123,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.78852503362129,
+        "roughness_plane_residual_std_m": 0.768175521244749,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c1759",
+      "grid_row": 1123,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.89456623144146,
+        "roughness_plane_residual_std_m": 0.6436891380532477,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c1918",
+      "grid_row": 1123,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.59703344681425,
+        "roughness_plane_residual_std_m": 0.7120097722543374,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2077",
+      "grid_row": 1123,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.76445445094315,
+        "roughness_plane_residual_std_m": 0.8153531163502142,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2236",
+      "grid_row": 1123,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.606174547477366,
+        "roughness_plane_residual_std_m": 0.7998560170538855,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2395",
+      "grid_row": 1123,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.908242334490446,
+        "roughness_plane_residual_std_m": 0.9502965228309388,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2554",
+      "grid_row": 1123,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.321829131317227,
+        "roughness_plane_residual_std_m": 0.3884368059582293,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2713",
+      "grid_row": 1123,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.771475846740024,
+        "roughness_plane_residual_std_m": 0.5001236361786064,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1123_c2872",
+      "grid_row": 1123,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -4617.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.266061669522713,
+        "roughness_plane_residual_std_m": 0.5566936677093509,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c646",
+      "grid_row": 1282,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.158649192380533,
+        "roughness_plane_residual_std_m": 0.4092833293041623,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c805",
+      "grid_row": 1282,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.56900099839432,
+        "roughness_plane_residual_std_m": 0.5803480007876556,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c964",
+      "grid_row": 1282,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.984432249999116,
+        "roughness_plane_residual_std_m": 1.3357039142330138,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1123",
+      "grid_row": 1282,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.79166772974809,
+        "roughness_plane_residual_std_m": 1.364578694273704,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1441",
+      "grid_row": 1282,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.53742988682391,
+        "roughness_plane_residual_std_m": 0.5499759279435635,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1600",
+      "grid_row": 1282,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 38.42871454376536,
+        "roughness_plane_residual_std_m": 0.9294797702402567,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1759",
+      "grid_row": 1282,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.952152151164796,
+        "roughness_plane_residual_std_m": 0.701325333357921,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c1918",
+      "grid_row": 1282,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.54857347507009,
+        "roughness_plane_residual_std_m": 0.7262980401738068,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c2077",
+      "grid_row": 1282,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.1861637230196,
+        "roughness_plane_residual_std_m": 0.5589491810230497,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c2236",
+      "grid_row": 1282,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.04208407159998,
+        "roughness_plane_residual_std_m": 0.6897200383074199,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c2395",
+      "grid_row": 1282,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.942369868596764,
+        "roughness_plane_residual_std_m": 0.41526387841735607,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c2554",
+      "grid_row": 1282,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 30.394741570648744,
+        "roughness_plane_residual_std_m": 0.6886527090741683,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1282_c2713",
+      "grid_row": 1282,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -5412.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.20359096169064,
+        "roughness_plane_residual_std_m": 0.6196312366012225,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c169",
+      "grid_row": 1441,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.98917859044847,
+        "roughness_plane_residual_std_m": 0.532102412795,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c646",
+      "grid_row": 1441,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.23510097878138,
+        "roughness_plane_residual_std_m": 0.7476710011939524,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c805",
+      "grid_row": 1441,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.04966294081599,
+        "roughness_plane_residual_std_m": 0.5336049626874865,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c964",
+      "grid_row": 1441,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.158119010670145,
+        "roughness_plane_residual_std_m": 0.6872696395522542,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1123",
+      "grid_row": 1441,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.062267668831694,
+        "roughness_plane_residual_std_m": 1.1233266984345949,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1282",
+      "grid_row": 1441,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.07008310785677,
+        "roughness_plane_residual_std_m": 1.1903539388251712,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1441",
+      "grid_row": 1441,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.28463506637459,
+        "roughness_plane_residual_std_m": 0.5988417866378634,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1600",
+      "grid_row": 1441,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.58012828104764,
+        "roughness_plane_residual_std_m": 1.3331747385232786,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1759",
+      "grid_row": 1441,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 42.5059403131876,
+        "roughness_plane_residual_std_m": 1.9567775233165385,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c1918",
+      "grid_row": 1441,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.084387115827276,
+        "roughness_plane_residual_std_m": 0.9061723351934655,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c2077",
+      "grid_row": 1441,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.61278243590569,
+        "roughness_plane_residual_std_m": 0.604585432388246,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c2236",
+      "grid_row": 1441,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.767381997684296,
+        "roughness_plane_residual_std_m": 0.8075063350148036,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c2395",
+      "grid_row": 1441,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.489244213028826,
+        "roughness_plane_residual_std_m": 0.5528751012507905,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c2554",
+      "grid_row": 1441,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.309591654954957,
+        "roughness_plane_residual_std_m": 0.6938938806185404,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1441_c2713",
+      "grid_row": 1441,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -6207.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.572494204745418,
+        "roughness_plane_residual_std_m": 0.5989690295152214,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c328",
+      "grid_row": 1600,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.93618191697094,
+        "roughness_plane_residual_std_m": 0.668384203607899,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c646",
+      "grid_row": 1600,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.300896831427163,
+        "roughness_plane_residual_std_m": 0.6016021167658012,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c805",
+      "grid_row": 1600,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.32078866437387,
+        "roughness_plane_residual_std_m": 0.4411089914707301,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c964",
+      "grid_row": 1600,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.997493897473774,
+        "roughness_plane_residual_std_m": 0.5934572570676108,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1123",
+      "grid_row": 1600,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.119063590451347,
+        "roughness_plane_residual_std_m": 0.8387233652173515,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1282",
+      "grid_row": 1600,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.054565896063362,
+        "roughness_plane_residual_std_m": 1.3081263439837694,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1441",
+      "grid_row": 1600,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.98109441217048,
+        "roughness_plane_residual_std_m": 0.7774651778907572,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1600",
+      "grid_row": 1600,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.303430605554745,
+        "roughness_plane_residual_std_m": 0.9211242414785387,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1759",
+      "grid_row": 1600,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 38.03894195662652,
+        "roughness_plane_residual_std_m": 0.7251477019076639,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c1918",
+      "grid_row": 1600,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.44231208251262,
+        "roughness_plane_residual_std_m": 0.8009072641194489,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c2077",
+      "grid_row": 1600,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.71372383018372,
+        "roughness_plane_residual_std_m": 0.9107684628776775,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c2236",
+      "grid_row": 1600,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.73737279497797,
+        "roughness_plane_residual_std_m": 0.77876385297609,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c2395",
+      "grid_row": 1600,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.08706783447934,
+        "roughness_plane_residual_std_m": 0.497969300087579,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1600_c2554",
+      "grid_row": 1600,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -7002.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.14972202394681,
+        "roughness_plane_residual_std_m": 0.560147310103942,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c328",
+      "grid_row": 1759,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.33395212610229,
+        "roughness_plane_residual_std_m": 0.5799676430893334,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c487",
+      "grid_row": 1759,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.021402320812648,
+        "roughness_plane_residual_std_m": 0.4439469522145885,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c646",
+      "grid_row": 1759,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.726750275163084,
+        "roughness_plane_residual_std_m": 0.3337923754249803,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c964",
+      "grid_row": 1759,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.833176288181402,
+        "roughness_plane_residual_std_m": 0.49714569293264793,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1123",
+      "grid_row": 1759,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.56573526718653,
+        "roughness_plane_residual_std_m": 0.7076362070480102,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1282",
+      "grid_row": 1759,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.837794194532208,
+        "roughness_plane_residual_std_m": 1.2467601013649396,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1441",
+      "grid_row": 1759,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 30.694139803299677,
+        "roughness_plane_residual_std_m": 0.4784100101938242,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1600",
+      "grid_row": 1759,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.29998170111183,
+        "roughness_plane_residual_std_m": 0.8034580583426514,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1759",
+      "grid_row": 1759,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.19145022985055,
+        "roughness_plane_residual_std_m": 0.9347766544643663,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c1918",
+      "grid_row": 1759,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.05857434976572,
+        "roughness_plane_residual_std_m": 1.0278746877422722,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2077",
+      "grid_row": 1759,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.54967737233294,
+        "roughness_plane_residual_std_m": 0.7759784829259068,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2236",
+      "grid_row": 1759,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.28267543958152,
+        "roughness_plane_residual_std_m": 0.48658277503429065,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2395",
+      "grid_row": 1759,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.20079011570797,
+        "roughness_plane_residual_std_m": 0.7108257365697422,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2554",
+      "grid_row": 1759,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.180169366185115,
+        "roughness_plane_residual_std_m": 0.5385265725582821,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2713",
+      "grid_row": 1759,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.455413919206933,
+        "roughness_plane_residual_std_m": 0.6087710992466971,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1759_c2872",
+      "grid_row": 1759,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -7797.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.162203714786123,
+        "roughness_plane_residual_std_m": 0.5460232923938242,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c10",
+      "grid_row": 1918,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.61071349209566,
+        "roughness_plane_residual_std_m": 0.758653769402827,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c169",
+      "grid_row": 1918,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.309471457738237,
+        "roughness_plane_residual_std_m": 0.3706195617504446,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c328",
+      "grid_row": 1918,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.86106905898311,
+        "roughness_plane_residual_std_m": 0.42906794573078866,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c487",
+      "grid_row": 1918,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.149696458293477,
+        "roughness_plane_residual_std_m": 0.5824001579624712,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c646",
+      "grid_row": 1918,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.311796007178895,
+        "roughness_plane_residual_std_m": 0.9505985849674108,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c964",
+      "grid_row": 1918,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.4598491332359,
+        "roughness_plane_residual_std_m": 0.7662923778702813,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1123",
+      "grid_row": 1918,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.040154097048894,
+        "roughness_plane_residual_std_m": 0.5864322320155722,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1282",
+      "grid_row": 1918,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.28594740343431,
+        "roughness_plane_residual_std_m": 1.0602574300332606,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1441",
+      "grid_row": 1918,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.317881867814716,
+        "roughness_plane_residual_std_m": 0.7337479575527526,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1600",
+      "grid_row": 1918,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.30263168941594,
+        "roughness_plane_residual_std_m": 0.8197393827112289,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1759",
+      "grid_row": 1918,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.78567751202661,
+        "roughness_plane_residual_std_m": 0.6917803535924909,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c1918",
+      "grid_row": 1918,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.69907440364787,
+        "roughness_plane_residual_std_m": 0.45270103703914244,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2077",
+      "grid_row": 1918,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.384585720918864,
+        "roughness_plane_residual_std_m": 0.6730720370885622,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2236",
+      "grid_row": 1918,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.71263795075589,
+        "roughness_plane_residual_std_m": 0.625707107974202,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2395",
+      "grid_row": 1918,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.92117967930453,
+        "roughness_plane_residual_std_m": 0.6260091095661784,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2554",
+      "grid_row": 1918,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 30.040729647552435,
+        "roughness_plane_residual_std_m": 0.5676639235697386,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2713",
+      "grid_row": 1918,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.23098705489552,
+        "roughness_plane_residual_std_m": 0.8907491125527315,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c2872",
+      "grid_row": 1918,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 25.24245700339421,
+        "roughness_plane_residual_std_m": 0.4161806617588385,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r1918_c3031",
+      "grid_row": 1918,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -8592.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.197169129045498,
+        "roughness_plane_residual_std_m": 0.3985178018943705,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c10",
+      "grid_row": 2077,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.071159082557326,
+        "roughness_plane_residual_std_m": 0.5126641630595411,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c169",
+      "grid_row": 2077,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.71357726062968,
+        "roughness_plane_residual_std_m": 0.4113069472914386,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c328",
+      "grid_row": 2077,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.706744796095453,
+        "roughness_plane_residual_std_m": 0.8070474757369909,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c487",
+      "grid_row": 2077,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 22.22148309696571,
+        "roughness_plane_residual_std_m": 0.5743570759262387,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c646",
+      "grid_row": 2077,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.734980378810192,
+        "roughness_plane_residual_std_m": 0.5674399787911498,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c805",
+      "grid_row": 2077,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.90496317946185,
+        "roughness_plane_residual_std_m": 1.2858351093255698,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c964",
+      "grid_row": 2077,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.39630366048815,
+        "roughness_plane_residual_std_m": 0.8180030414092845,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1123",
+      "grid_row": 2077,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.969970307952387,
+        "roughness_plane_residual_std_m": 1.2502740565728203,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1282",
+      "grid_row": 2077,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.945293800617282,
+        "roughness_plane_residual_std_m": 0.6052371333519414,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1441",
+      "grid_row": 2077,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 27.667960721616744,
+        "roughness_plane_residual_std_m": 0.5690929794233782,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1600",
+      "grid_row": 2077,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.27994693797435,
+        "roughness_plane_residual_std_m": 0.6613761933773599,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1759",
+      "grid_row": 2077,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.62616799507655,
+        "roughness_plane_residual_std_m": 0.6636797472687512,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c1918",
+      "grid_row": 2077,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.67577813057523,
+        "roughness_plane_residual_std_m": 0.9503872999534336,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2077",
+      "grid_row": 2077,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.45887501622489,
+        "roughness_plane_residual_std_m": 0.5329770372663822,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2236",
+      "grid_row": 2077,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.17954474431606,
+        "roughness_plane_residual_std_m": 0.6903405101243729,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2395",
+      "grid_row": 2077,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.18465416752213,
+        "roughness_plane_residual_std_m": 0.6474642084424815,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2554",
+      "grid_row": 2077,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.38941619310279,
+        "roughness_plane_residual_std_m": 0.6200044183099677,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2713",
+      "grid_row": 2077,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.566690791067636,
+        "roughness_plane_residual_std_m": 0.6598129221724752,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c2872",
+      "grid_row": 2077,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.94857824988501,
+        "roughness_plane_residual_std_m": 0.3686532766784252,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2077_c3031",
+      "grid_row": 2077,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -9387.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 30.584608765407495,
+        "roughness_plane_residual_std_m": 0.6552892136344932,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c10",
+      "grid_row": 2236,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.370990991720713,
+        "roughness_plane_residual_std_m": 0.690315508724513,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c169",
+      "grid_row": 2236,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.217331403355153,
+        "roughness_plane_residual_std_m": 0.6505741179401457,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c328",
+      "grid_row": 2236,
+      "grid_col": 328,
+      "map_x": -7357.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.261955179928304,
+        "roughness_plane_residual_std_m": 0.4758591163213888,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c805",
+      "grid_row": 2236,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.99637861162434,
+        "roughness_plane_residual_std_m": 1.4615154294853145,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c964",
+      "grid_row": 2236,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.528817916844044,
+        "roughness_plane_residual_std_m": 0.5932292062452806,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1123",
+      "grid_row": 2236,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.94342942045888,
+        "roughness_plane_residual_std_m": 0.8937032101359393,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1282",
+      "grid_row": 2236,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 24.150393873255613,
+        "roughness_plane_residual_std_m": 2.156634293645679,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1441",
+      "grid_row": 2236,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.26956987801639,
+        "roughness_plane_residual_std_m": 1.052917843863075,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1600",
+      "grid_row": 2236,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.67695555637912,
+        "roughness_plane_residual_std_m": 1.136241387669003,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1759",
+      "grid_row": 2236,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.27469666663207,
+        "roughness_plane_residual_std_m": 0.7371858026635455,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c1918",
+      "grid_row": 2236,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.412639909074514,
+        "roughness_plane_residual_std_m": 0.8404521952487037,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2077",
+      "grid_row": 2236,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.28755984426011,
+        "roughness_plane_residual_std_m": 0.6265481892914637,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2236",
+      "grid_row": 2236,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.739446201081414,
+        "roughness_plane_residual_std_m": 0.6006617128895724,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2395",
+      "grid_row": 2236,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.762190185359955,
+        "roughness_plane_residual_std_m": 0.697070449059247,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2554",
+      "grid_row": 2236,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.88931912507242,
+        "roughness_plane_residual_std_m": 0.876742897202119,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2713",
+      "grid_row": 2236,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.3452377448968,
+        "roughness_plane_residual_std_m": 0.8916421974250499,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c2872",
+      "grid_row": 2236,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.53152680956719,
+        "roughness_plane_residual_std_m": 0.5365842734279517,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2236_c3031",
+      "grid_row": 2236,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -10182.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 28.313563736674055,
+        "roughness_plane_residual_std_m": 0.638727434851302,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c169",
+      "grid_row": 2395,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.126318937949026,
+        "roughness_plane_residual_std_m": 0.5840397466832518,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c487",
+      "grid_row": 2395,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.267071252015377,
+        "roughness_plane_residual_std_m": 0.4870577458541515,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c964",
+      "grid_row": 2395,
+      "grid_col": 964,
+      "map_x": -4177.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.479902283428965,
+        "roughness_plane_residual_std_m": 1.4346155068031259,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1123",
+      "grid_row": 2395,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 17.003269289944917,
+        "roughness_plane_residual_std_m": 0.7566507650799417,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1282",
+      "grid_row": 2395,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 23.054446605646117,
+        "roughness_plane_residual_std_m": 0.5886813709046566,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1441",
+      "grid_row": 2395,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.943832601823072,
+        "roughness_plane_residual_std_m": 0.8524590309378314,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1600",
+      "grid_row": 2395,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.11090646871632,
+        "roughness_plane_residual_std_m": 1.1457769770252688,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1759",
+      "grid_row": 2395,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.078228896847857,
+        "roughness_plane_residual_std_m": 0.47667524642941095,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c1918",
+      "grid_row": 2395,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.40634374251064,
+        "roughness_plane_residual_std_m": 1.5093009924300727,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2077",
+      "grid_row": 2395,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 37.36706597449149,
+        "roughness_plane_residual_std_m": 0.9002542766887606,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2236",
+      "grid_row": 2395,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.54913284876373,
+        "roughness_plane_residual_std_m": 0.6782170143455156,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2395",
+      "grid_row": 2395,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.78835636785697,
+        "roughness_plane_residual_std_m": 0.6075508102809372,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2554",
+      "grid_row": 2395,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.31732712028435,
+        "roughness_plane_residual_std_m": 0.7010981332848327,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2713",
+      "grid_row": 2395,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 32.90364962646563,
+        "roughness_plane_residual_std_m": 0.4872905341815728,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c2872",
+      "grid_row": 2395,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.929367519687904,
+        "roughness_plane_residual_std_m": 0.8062563514167009,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2395_c3031",
+      "grid_row": 2395,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -10977.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.04009304766756,
+        "roughness_plane_residual_std_m": 0.6298640911210327,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c169",
+      "grid_row": 2554,
+      "grid_col": 169,
+      "map_x": -8152.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.000002951302353,
+        "roughness_plane_residual_std_m": 0.8595246663354426,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c487",
+      "grid_row": 2554,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.1125060828111,
+        "roughness_plane_residual_std_m": 0.6334043227195103,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c1282",
+      "grid_row": 2554,
+      "grid_col": 1282,
+      "map_x": -2587.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 19.498958006813055,
+        "roughness_plane_residual_std_m": 0.6209817993498635,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c1600",
+      "grid_row": 2554,
+      "grid_col": 1600,
+      "map_x": -997.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 27.21273727393852,
+        "roughness_plane_residual_std_m": 3.0257775835666196,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c1759",
+      "grid_row": 2554,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.554124287511165,
+        "roughness_plane_residual_std_m": 0.7094733753933731,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c1918",
+      "grid_row": 2554,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.12361912997482,
+        "roughness_plane_residual_std_m": 0.9531289955329404,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2077",
+      "grid_row": 2554,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.4080019693201,
+        "roughness_plane_residual_std_m": 0.9320166191946069,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2236",
+      "grid_row": 2554,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.16896471133292,
+        "roughness_plane_residual_std_m": 0.6315176938818857,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2395",
+      "grid_row": 2554,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.850058524149176,
+        "roughness_plane_residual_std_m": 0.9357103717330305,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2554",
+      "grid_row": 2554,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.33505147077747,
+        "roughness_plane_residual_std_m": 0.7291081038773665,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2713",
+      "grid_row": 2554,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.85102997073529,
+        "roughness_plane_residual_std_m": 0.5806875750766491,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c2872",
+      "grid_row": 2554,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.12258471095985,
+        "roughness_plane_residual_std_m": 0.6198488125710984,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2554_c3031",
+      "grid_row": 2554,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -11772.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 31.709415136393037,
+        "roughness_plane_residual_std_m": 0.6199680244455907,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c646",
+      "grid_row": 2713,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 20.09758847887883,
+        "roughness_plane_residual_std_m": 0.4834365540485217,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c805",
+      "grid_row": 2713,
+      "grid_col": 805,
+      "map_x": -4972.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 21.394517920127143,
+        "roughness_plane_residual_std_m": 1.1607053321964351,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c1441",
+      "grid_row": 2713,
+      "grid_col": 1441,
+      "map_x": -1792.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.33861745174462,
+        "roughness_plane_residual_std_m": 0.9414277370776925,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c1759",
+      "grid_row": 2713,
+      "grid_col": 1759,
+      "map_x": -202.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.69353636282309,
+        "roughness_plane_residual_std_m": 1.2422427977865946,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c1918",
+      "grid_row": 2713,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.30556070168816,
+        "roughness_plane_residual_std_m": 0.6898378110556368,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2077",
+      "grid_row": 2713,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.64703759085551,
+        "roughness_plane_residual_std_m": 1.0596238882140432,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2236",
+      "grid_row": 2713,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.08333175477583,
+        "roughness_plane_residual_std_m": 0.7987520878970938,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2395",
+      "grid_row": 2713,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.27705862459475,
+        "roughness_plane_residual_std_m": 0.88411345140826,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2554",
+      "grid_row": 2713,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.88059639637867,
+        "roughness_plane_residual_std_m": 0.7832597517222303,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2713",
+      "grid_row": 2713,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.158790571815906,
+        "roughness_plane_residual_std_m": 0.9380273755011209,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c2872",
+      "grid_row": 2713,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.10340794243608,
+        "roughness_plane_residual_std_m": 1.9477379798564656,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2713_c3031",
+      "grid_row": 2713,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -12567.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.14964326373487,
+        "roughness_plane_residual_std_m": 0.8302642391106294,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c10",
+      "grid_row": 2872,
+      "grid_col": 10,
+      "map_x": -8947.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 15.429817114701331,
+        "roughness_plane_residual_std_m": 2.2980320516313797,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c487",
+      "grid_row": 2872,
+      "grid_col": 487,
+      "map_x": -6562.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.080116251153527,
+        "roughness_plane_residual_std_m": 1.6065428839311073,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c646",
+      "grid_row": 2872,
+      "grid_col": 646,
+      "map_x": -5767.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 18.548047498240173,
+        "roughness_plane_residual_std_m": 1.4208517716385964,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c1918",
+      "grid_row": 2872,
+      "grid_col": 1918,
+      "map_x": 592.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 29.64891842960902,
+        "roughness_plane_residual_std_m": 1.1535770337706475,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2077",
+      "grid_row": 2872,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 27.81445060217109,
+        "roughness_plane_residual_std_m": 0.6896544159628302,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2236",
+      "grid_row": 2872,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.533363609652305,
+        "roughness_plane_residual_std_m": 0.9528260628731037,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2395",
+      "grid_row": 2872,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.545042367028884,
+        "roughness_plane_residual_std_m": 0.6613306283402962,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2554",
+      "grid_row": 2872,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 38.95813626971908,
+        "roughness_plane_residual_std_m": 0.8835269832837777,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2713",
+      "grid_row": 2872,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.44292157604205,
+        "roughness_plane_residual_std_m": 1.0592042401247528,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c2872",
+      "grid_row": 2872,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.56896533672053,
+        "roughness_plane_residual_std_m": 0.6315359543519838,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r2872_c3031",
+      "grid_row": 2872,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -13362.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.24466798374094,
+        "roughness_plane_residual_std_m": 0.6853260041402107,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c1123",
+      "grid_row": 3031,
+      "grid_col": 1123,
+      "map_x": -3382.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 16.55830445758879,
+        "roughness_plane_residual_std_m": 1.44959575983374,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2077",
+      "grid_row": 3031,
+      "grid_col": 2077,
+      "map_x": 1387.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 26.42928313879944,
+        "roughness_plane_residual_std_m": 1.5249331281212435,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2236",
+      "grid_row": 3031,
+      "grid_col": 2236,
+      "map_x": 2182.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 33.86820260468783,
+        "roughness_plane_residual_std_m": 1.3244191125340337,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2395",
+      "grid_row": 3031,
+      "grid_col": 2395,
+      "map_x": 2977.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.018750946680505,
+        "roughness_plane_residual_std_m": 1.0218433520194734,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2554",
+      "grid_row": 3031,
+      "grid_col": 2554,
+      "map_x": 3772.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 35.01879385136771,
+        "roughness_plane_residual_std_m": 0.8042136856897708,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2713",
+      "grid_row": 3031,
+      "grid_col": 2713,
+      "map_x": 4567.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 36.66353564949754,
+        "roughness_plane_residual_std_m": 1.0112040900366452,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c2872",
+      "grid_row": 3031,
+      "grid_col": 2872,
+      "map_x": 5362.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 34.68140591781583,
+        "roughness_plane_residual_std_m": 0.6063319359761666,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    },
+    {
+      "name": "candidate_r3031_c3031",
+      "grid_row": 3031,
+      "grid_col": 3031,
+      "map_x": 6157.5,
+      "map_y": -14157.5,
+      "terrain_metrics": {
+        "slope_p95_deg": 39.742819866678055,
+        "roughness_plane_residual_std_m": 1.2870938869725106,
+        "valid_fraction": 1.0
+      },
+      "eligible_by_terrain_thresholds": false,
+      "exclusion_reasons": [
+        "PENDENZA_OLTRE_SOGLIA"
+      ]
+    }
+  ],
+  "warnings": [
+    "Classifica preliminare: non certifica la sicurezza dell'atterraggio.",
+    "Il campionamento non analizza ogni pixel del DEM.",
+    "Il punteggio usa soltanto pendenza e rugosità.",
+    "Illuminazione, comunicazioni e confidenza non sono incluse nel punteggio.",
+    "Coordinate e CRS non attestano da soli un frame lunare fisicamente validato."
+  ]
+}

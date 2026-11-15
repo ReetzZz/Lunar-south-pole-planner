@@ -1,0 +1,201 @@
+{
+  "schema": "lunar-descent-hazard-report/1.0",
+  "status": "preliminary",
+  "decision": "EVITARE",
+  "decision_reasons": [
+    "Pendenza 23.173° oltre soglia 15.000°.",
+    "Rugosità proxy 14.998 m oltre soglia 1.000 m."
+  ],
+  "input": {
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "center_rc": [
+      110,
+      110
+    ],
+    "radius_cells": 5,
+    "scan_source": "simulated_from_dem",
+    "pixel_size_x_m": 5.0,
+    "pixel_size_y_m": 5.0
+  },
+  "coverage": {
+    "valid_cells": 121,
+    "total_cells": 121,
+    "fraction": 1.0,
+    "required_fraction": 0.9
+  },
+  "metrics": {
+    "max_local_slope_deg": 23.172747067353676,
+    "roughness_p95_minus_p5_m": 14.998321136988892,
+    "mae_scan_vs_dem_m": 0.039576618988544754,
+    "p95_absolute_discrepancy_m": 0.09008174349330034,
+    "max_absolute_discrepancy_m": 0.11625153873194449
+  },
+  "cell_risk_map": {
+    "classification": [
+      [
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "ENTRO_SOGLIE"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "ENTRO_SOGLIE",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ],
+      [
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO",
+        "RISCHIO"
+      ]
+    ],
+    "counts": {
+      "ENTRO_SOGLIE": 49,
+      "RISCHIO": 72,
+      "DATI_INSUFFICIENTI": 0
+    },
+    "legend": {
+      "ENTRO_SOGLIE": "Nessuna soglia locale superata; non certifica la sicurezza.",
+      "RISCHIO": "Pendenza o discrepanza locale oltre soglia.",
+      "DATI_INSUFFICIENTI": "DEM o scansione non validi in questa cella."
+    }
+  },
+  "thresholds": {
+    "max_slope_deg": 15.0,
+    "max_roughness_m": 1.0,
+    "max_discrepancy_m": 1.5
+  },
+  "warnings": [
+    "Prototipo software preliminare: non certificato per un atterraggio reale.",
+    "La scansione sintetica non riproduce geometria, dinamica o limiti reali del lidar.",
+    "Il confronto presuppone DEM e scansione allineati nello stesso riferimento orizzontale e verticale.",
+    "La classificazione non costituisce una garanzia di sicurezza."
+  ]
+}

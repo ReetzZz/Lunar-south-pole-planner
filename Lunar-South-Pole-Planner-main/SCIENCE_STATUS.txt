@@ -1,0 +1,2 @@
+Last updated: 2026-11-14
+LUNAR SOUTH POLE PLANNER — SCIENCE STATUS\n\nDisponibile: audit dei metadati raster DTM, se rasterio è installato; riepilogo dei vincoli attuali.\n\nDa implementare e validare: georeferenziazione del GLB, pendenze, rugosità, profili, ombre, orizzonte locale, linea di vista radio, vincoli energetici, termici e di mobilità.\n

@@ -1,0 +1,89 @@
+{
+  "schema": "lunar-multi-rover-allocation/1.0",
+  "generated_utc": "2026-10-28T22:21:41.125116+00:00",
+  "status": "local_high_level_plan",
+  "rover_count": 2,
+  "task_count": 3,
+  "assigned_count": 3,
+  "unassigned_count": 0,
+  "assignments": [
+    {
+      "task_id": "survey-A",
+      "rover_id": "rover-01",
+      "distance_from_previous_position_m": 36.056,
+      "travel_energy_estimate_wh": 0.721,
+      "task_energy_estimate_wh": 15.0,
+      "total_energy_reserved_wh": 15.721,
+      "priority": 5.0,
+      "status": "assigned",
+      "description": "Ricognizione"
+    },
+    {
+      "task_id": "sample-B",
+      "rover_id": "rover-01",
+      "distance_from_previous_position_m": 110.454,
+      "travel_energy_estimate_wh": 2.209,
+      "task_energy_estimate_wh": 25.0,
+      "total_energy_reserved_wh": 27.209,
+      "priority": 4.0,
+      "status": "assigned",
+      "description": "Campionamento"
+    },
+    {
+      "task_id": "drill-C",
+      "rover_id": "rover-02",
+      "distance_from_previous_position_m": 83.815,
+      "travel_energy_estimate_wh": 2.095,
+      "task_energy_estimate_wh": 35.0,
+      "total_energy_reserved_wh": 37.095,
+      "priority": 3.0,
+      "status": "assigned",
+      "description": "Analisi sottosuolo"
+    }
+  ],
+  "unassigned_tasks": [],
+  "rovers": [
+    {
+      "rover_id": "rover-01",
+      "assigned_task_ids": [
+        "survey-A",
+        "sample-B"
+      ],
+      "distance_sum_m": 146.509,
+      "energy_reserved_wh": 42.93,
+      "remaining_energy_wh": 137.07,
+      "capabilities": [
+        "camera",
+        "sampling"
+      ],
+      "final_position_xy": [
+        140.0,
+        10.0
+      ]
+    },
+    {
+      "rover_id": "rover-02",
+      "assigned_task_ids": [
+        "drill-C"
+      ],
+      "distance_sum_m": 83.815,
+      "energy_reserved_wh": 37.095,
+      "remaining_energy_wh": 112.905,
+      "capabilities": [
+        "camera",
+        "drill"
+      ],
+      "final_position_xy": [
+        180.0,
+        25.0
+      ]
+    }
+  ],
+  "limitations": [
+    "Posizioni espresse in un frame metrico locale comune; non vengono trasformate da coordinate geografiche lunari.",
+    "La distanza è euclidea in linea d'aria, non un percorso calcolato sul DEM.",
+    "I consumi sono stime basate su energy_wh_per_m e sui consumi task forniti dall'utente.",
+    "Non vengono pianificati link radio, finestre di illuminazione, collision avoidance o sincronizzazione distribuita.",
+    "Gli eventi possono essere registrati nel journal locale; nessun nodo P-System remoto è collegato."
+  ]
+}

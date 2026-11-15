@@ -1,0 +1,67 @@
+{
+  "method": "LOLA-LROC preliminary strict-mask comparison",
+  "strict_rule": "nearest valid plus bilinear-resampled source mask >= 0.999",
+  "warning": "CRS/geodetic alignment is not independently validated. This mask test is diagnostic, not a geodetic correction.",
+  "global": {
+    "lola_pixels": 10240000,
+    "common_pixels_before_strict_filter": 690057,
+    "common_pixels_after_strict_filter": 682758,
+    "strict_coverage_percent_of_lola": 6.6676
+  },
+  "zones": [
+    {
+      "name": "zona_1",
+      "x": -580.0,
+      "y": -9090.0,
+      "lola_row": 2018,
+      "lola_col": 1684,
+      "stats": {
+        "window_pixels": 6561,
+        "strict_common_pixels": 4,
+        "strict_coverage_percent": 0.061,
+        "median_difference_m": -468.7707,
+        "mae_m": 469.5248,
+        "rmse_m": 469.536,
+        "p95_abs_difference_m": 473.8879,
+        "count_abs_diff_gt_10m": 4,
+        "count_abs_diff_gt_100m": 4
+      }
+    },
+    {
+      "name": "zona_2",
+      "x": -4900.0,
+      "y": -5380.0,
+      "lola_row": 1276,
+      "lola_col": 820,
+      "stats": {
+        "window_pixels": 6561,
+        "strict_common_pixels": 2154,
+        "strict_coverage_percent": 32.8304,
+        "median_difference_m": -0.2034,
+        "mae_m": 0.5352,
+        "rmse_m": 0.76,
+        "p95_abs_difference_m": 1.3077,
+        "count_abs_diff_gt_10m": 0,
+        "count_abs_diff_gt_100m": 0
+      }
+    },
+    {
+      "name": "zona_3",
+      "x": -4020.0,
+      "y": -6170.0,
+      "lola_row": 1434,
+      "lola_col": 996,
+      "stats": {
+        "window_pixels": 6561,
+        "strict_common_pixels": 2334,
+        "strict_coverage_percent": 35.5738,
+        "median_difference_m": -0.2849,
+        "mae_m": 0.6497,
+        "rmse_m": 0.8899,
+        "p95_abs_difference_m": 1.9176,
+        "count_abs_diff_gt_10m": 0,
+        "count_abs_diff_gt_100m": 0
+      }
+    }
+  ]
+}

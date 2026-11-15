@@ -1,0 +1,31 @@
+<!-- Last updated: 2026-11-14 -->
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lunar Explorer 3D</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#07111b;color:#c5e8f4;
+font:14px system-ui,sans-serif} header{padding:14px 20px;border-bottom:1px solid #19445a;
+display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:18px;letter-spacing:2px;margin:0;color:#7df9ff}
+nav{display:flex;gap:8px} button{background:#102b3d;color:#c5e8f4;
+border:1px solid #27617b;border-radius:6px;padding:10px 14px;cursor:pointer}
+button:hover{background:#17445b} iframe{width:100%;height:calc(100vh - 118px);
+border:0} footer{padding:8px 18px;color:#7bacc2;font-size:11px}
+</style></head>
+<body>
+<header><h1>LUNAR EXPLORER 3D</h1><nav>
+<button onclick="view('global')">Globo lunare</button>
+<button onclick="view('terrain')">Terreno LOLA Site04</button>
+</nav></header>
+<iframe id="scene" src="lunar_global_3d.html"></iframe>
+<footer>Prototype 3D • il globo globale è schematico; la vista locale usa il DEM LOLA.
+Il riferimento fisico delle coordinate del raster non è ancora validato.</footer>
+<script>
+function view(which){
+ document.getElementById('scene').src =
+ which==='terrain' ? 'lunar_terrain_site04_3d.html' : 'lunar_global_3d.html';
+}
+</script></body></html>

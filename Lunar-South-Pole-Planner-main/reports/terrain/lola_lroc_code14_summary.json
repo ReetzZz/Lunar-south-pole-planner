@@ -1,0 +1,15 @@
+{
+  "method": "LOLA-LROC diagnostic comparison, original confidence code 14 only",
+  "resampling": "LROC elevation bilinear; confidence nearest",
+  "valid_pixels": 668909,
+  "median_difference_lroc_minus_lola_m": 0.7000732421875,
+  "mean_difference_lroc_minus_lola_m": 0.7588256808198768,
+  "mae_m": 0.9169067305801021,
+  "rmse_m": 1.1660009122790784,
+  "p95_absolute_difference_m": 2.28118896484375,
+  "max_absolute_difference_m": 18.6873779296875,
+  "absolute_difference_over_10m": 35,
+  "absolute_difference_over_50m": 0,
+  "absolute_difference_over_100m": 0,
+  "warning": "Diagnostic only. Code 14 does not certify geodetic alignment, vertical datum equivalence, or absolute accuracy."
+}

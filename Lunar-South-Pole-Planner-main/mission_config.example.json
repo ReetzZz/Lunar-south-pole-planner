@@ -1,0 +1,145 @@
+{
+  "output_dir": "reports/mission",
+  "rover_path": {
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "start_rc": [
+      120,
+      113
+    ],
+    "goal_rc": [
+      100,
+      100
+    ],
+    "max_slope_deg": 20.0,
+    "energy_wh_per_m": 0.02,
+    "energy_budget_wh": 100000.0,
+    "allow_diagonal": true
+  },
+  "lola_lroc_quality": {
+    "lola_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "lroc_path": "data/terrain/reference-lroc/NAC_DTM_ESALL_SR12.TIF",
+    "confidence_path": "data/terrain/reference-lroc/source-check/NAC_DTM_ESALL_SR12_CONF_original.IMG",
+    "report_name": "lola_lroc_quality.json"
+  },
+  "descent_hazard_detection": {
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "center_rc": [
+      110,
+      110
+    ],
+    "radius_cells": 5,
+    "noise_sigma_m": 0.05,
+    "synthetic_obstacle_height_m": 0.0,
+    "max_slope_deg": 15.0,
+    "max_roughness_m": 1.0,
+    "max_discrepancy_m": 1.5,
+    "min_coverage": 0.9,
+    "random_seed": 0,
+    "report_name": "descent_hazard_report.json"
+  },
+  "site_selection": {
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "radius_pixels": 10,
+    "target_candidates": 400,
+    "max_slope_deg": 15.0,
+    "max_roughness_m": 5.0,
+    "min_valid_fraction": 0.95,
+    "top_n": 20,
+    "report_name": "site_ranking.json"
+  },
+  "astronomy": {
+    "enabled": false,
+    "site": "Connecting Ridge",
+    "hours": 48,
+    "step": "1h",
+    "targets": [
+      "10",
+      "399"
+    ],
+    "report_name": "astronomy_observations.json"
+  },
+  "illumination": {
+    "enabled": false,
+    "horizon_json": "reports/mission/horizon_profile.json",
+    "report_name": "solar_illumination_diagnostic.json"
+  },
+  "local_site_analysis": {
+    "enabled": false,
+    "site_name": "Connecting Ridge",
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "observer_x_m": null,
+    "observer_y_m": null,
+    "azimuth_step_deg": 2.0,
+    "max_distance_m": 7000.0,
+    "observer_height_m": 0.0,
+    "report_name": "local_site_analysis.json"
+  },
+  "confidence_validation": {
+    "enabled": false,
+    "raster_path": "data/terrain/reference-lroc/source-check/NAC_DTM_ESALL_SR12_CONF_original.IMG",
+    "report_name": "confidence_validation.json"
+  },
+  "data_quality": {
+    "enabled": false,
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "comparison_path": "data/terrain/reference-lroc/NAC_DTM_ESALL_SR12.TIF",
+    "report_name": "data_quality_audit.json"
+  },
+  "horizon_analysis": {
+    "enabled": false,
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "observer_row": null,
+    "observer_col": null,
+    "observer_height_m": 1.0,
+    "azimuth_step_deg": 2.0,
+    "max_distance_m": 5000.0,
+    "report_name": "horizon_profile.json"
+  },
+  "visibility_analysis": {
+    "enabled": false,
+    "horizon_json": "reports/mission/horizon_profile.json",
+    "grid_azimuth_offset_deg": null,
+    "report_name": "astronomical_visibility_diagnostic.json"
+  },
+  "mission_report": {
+    "enabled": true,
+    "site_name": "Connecting Ridge",
+    "planning_date": "2026-10-25",
+    "horizon_hours": 48
+  },
+  "site_assessment": {
+    "enabled": false,
+    "candidate_name": "Candidate-01",
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "row": null,
+    "col": null,
+    "radius_pixels": 10,
+    "confidence_path": "data/terrain/reference-lroc/source-check/NAC_DTM_ESALL_SR12_CONF_original.IMG",
+    "report_name": "site_assessment.json"
+  },
+  "lunar_geometry": {
+    "enabled": false,
+    "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "longitude_east_deg": null,
+    "latitude_deg": null,
+    "report_name": "lunar_geometry_diagnostic.json"
+  },
+  "descent_risk_map": {
+    "enabled": false,
+    "report_name": "descent_risk_map.tif"
+  },
+  "energy": {
+    "enabled": false,
+    "description": "Stima energetica preliminare; richiede parametri reali del rover."
+  },
+  "fleet": {
+    "enabled": false,
+    "rovers": [],
+    "tasks": []
+  },
+  "journal": {
+    "enabled": false,
+    "node_id": "lunar-planner-local",
+    "path": "reports/mission/mission_events.jsonl"
+  }
+}

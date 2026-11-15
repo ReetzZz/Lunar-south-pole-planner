@@ -1,0 +1,117 @@
+{
+  "schema": "lola-lroc-quality-report/1.0",
+  "method": "LROC bilinear resampling on LOLA grid; confidence nearest",
+  "sources": {
+    "lola_dem": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+    "lroc_dem": "data/terrain/reference-lroc/NAC_DTM_ESALL_SR12.TIF",
+    "lroc_original_confidence": "data/terrain/reference-lroc/source-check/NAC_DTM_ESALL_SR12_CONF_original.IMG"
+  },
+  "valid_overlap_pixels": 689938,
+  "confidence_class_counts_on_overlap": {
+    "1": 95,
+    "2": 41,
+    "4": 20800,
+    "5": 43,
+    "6": 50,
+    "14": 668909
+  },
+  "by_confidence_class": {
+    "1": {
+      "description": "Ombra",
+      "pixel_count": 95,
+      "median_difference_m": 0.8482666015625,
+      "mean_difference_m": 64.87040051912007,
+      "mae_m": 65.06199051706415,
+      "rmse_m": 173.40085388951138,
+      "p95_absolute_difference_m": 468.7989196777344,
+      "max_absolute_difference_m": 477.157470703125,
+      "absolute_difference_over_10m": 13,
+      "absolute_difference_over_50m": 13,
+      "absolute_difference_over_100m": 13
+    },
+    "2": {
+      "description": "Classe non documentata nell'etichetta consultata",
+      "pixel_count": 41,
+      "median_difference_m": 0.815185546875,
+      "mean_difference_m": 1.1674998213605183,
+      "mae_m": 1.4062217154153964,
+      "rmse_m": 1.8200029800892543,
+      "p95_absolute_difference_m": 3.20941162109375,
+      "max_absolute_difference_m": 3.6790771484375,
+      "absolute_difference_over_10m": 0,
+      "absolute_difference_over_50m": 0,
+      "absolute_difference_over_100m": 0
+    },
+    "4": {
+      "description": "Interpolato o estrapolato",
+      "pixel_count": 20800,
+      "median_difference_m": 0.4246826171875,
+      "mean_difference_m": 0.08400803492619441,
+      "mae_m": 1.740012045640212,
+      "rmse_m": 6.172469389835745,
+      "p95_absolute_difference_m": 4.199609375,
+      "max_absolute_difference_m": 192.2359619140625,
+      "absolute_difference_over_10m": 61,
+      "absolute_difference_over_50m": 48,
+      "absolute_difference_over_100m": 29
+    },
+    "5": {
+      "description": "Classe non documentata nell'etichetta consultata",
+      "pixel_count": 43,
+      "median_difference_m": 0.7340087890625,
+      "mean_difference_m": 1.013954340025436,
+      "mae_m": 1.1091890556867732,
+      "rmse_m": 1.4622891040976354,
+      "p95_absolute_difference_m": 2.761663818359375,
+      "max_absolute_difference_m": 3.7564697265625,
+      "absolute_difference_over_10m": 0,
+      "absolute_difference_over_50m": 0,
+      "absolute_difference_over_100m": 0
+    },
+    "6": {
+      "description": "Classe non documentata nell'etichetta consultata",
+      "pixel_count": 50,
+      "median_difference_m": 0.76129150390625,
+      "mean_difference_m": 0.966947021484375,
+      "mae_m": 1.061024169921875,
+      "rmse_m": 1.3117463569905419,
+      "p95_absolute_difference_m": 2.406097412109375,
+      "max_absolute_difference_m": 2.9237060546875,
+      "absolute_difference_over_10m": 0,
+      "absolute_difference_over_50m": 0,
+      "absolute_difference_over_100m": 0
+    },
+    "14": {
+      "description": "Basato sui risultati dell'image matching",
+      "pixel_count": 668909,
+      "median_difference_m": 0.7000732421875,
+      "mean_difference_m": 0.7588256808198768,
+      "mae_m": 0.9169067305801021,
+      "rmse_m": 1.1660009122790784,
+      "p95_absolute_difference_m": 2.28118896484375,
+      "max_absolute_difference_m": 18.6873779296875,
+      "absolute_difference_over_10m": 35,
+      "absolute_difference_over_50m": 0,
+      "absolute_difference_over_100m": 0
+    }
+  },
+  "code_14_reference_comparison": {
+    "pixel_count": 668909,
+    "median_difference_m": 0.7000732421875,
+    "mean_difference_m": 0.7588256808198768,
+    "mae_m": 0.9169067305801021,
+    "rmse_m": 1.1660009122790784,
+    "p95_absolute_difference_m": 2.28118896484375,
+    "max_absolute_difference_m": 18.6873779296875,
+    "absolute_difference_over_10m": 35,
+    "absolute_difference_over_50m": 0,
+    "absolute_difference_over_100m": 0
+  },
+  "warnings": [
+    "Confronto diagnostico, non validazione geodetica.",
+    "Il codice 14 indica image matching riuscito, non certifica l'accuratezza assoluta.",
+    "Le differenze non sono correzioni da applicare automaticamente alle quote.",
+    "La confidenza LROC non è una maschera di percorribilità del rover.",
+    "Il confronto non certifica frame fisico lunare o datum verticale equivalenti."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "lunar-mission-orchestration/1.0",
+  "run_id": "9f32aa6d-2f68-4cb7-8b44-5b150b8a8b25",
+  "generated_utc": "2026-10-27T17:41:57.991801+00:00",
+  "status": "completed_preliminary",
+  "configuration": "mission_config.example.json",
+  "steps": {
+    "descent_hazard_detection": {
+      "status": "success",
+      "result": {
+        "decision": "EVITARE",
+        "decision_reasons": [
+          "Pendenza 23.173° oltre soglia 15.000°.",
+          "Rugosità proxy 14.998 m oltre soglia 1.000 m."
+        ],
+        "coverage_fraction": 1.0,
+        "report_file": "reports/mission/descent_hazard_report.json",
+        "status": "preliminary"
+      }
+    },
+    "site_selection": {
+      "status": "success",
+      "result": {
+        "status": "preliminary",
+        "candidates_ranked": 20,
+        "report_file": "reports/mission/site_ranking.json",
+        "warnings": [
+          "Classifica preliminare: non certifica la sicurezza dell'atterraggio.",
+          "Il campionamento non analizza ogni pixel del DEM.",
+          "Il punteggio usa soltanto pendenza e rugosità.",
+          "Illuminazione, comunicazioni e confidenza non sono incluse nel punteggio.",
+          "Coordinate e CRS non attestano da soli un frame lunare fisicamente validato."
+        ]
+      }
+    },
+    "lola_lroc_quality": {
+      "status": "success",
+      "result": {
+        "output_path": "reports/mission/lola_lroc_quality.json",
+        "valid_overlap_pixels": 689938,
+        "code_14_mae_m": 0.9169067305801021,
+        "code_14_rmse_m": 1.1660009122790784,
+        "class_counts": {
+          "1": 95,
+          "2": 41,
+          "4": 20800,
+          "5": 43,
+          "6": 50,
+          "14": 668909
+        }
+      }
+    },
+    "rover_path": {
+      "status": "success",
+      "result": {
+        "distance_m": 133.99494936611666,
+        "estimated_energy_wh": 2.6798989873223333,
+        "max_slope_deg": 19.799291107416934,
+        "cells_in_path": 22,
+        "cells_expanded": 558,
+        "plan_file": "reports/mission/rover_plan.json",
+        "status": "preliminary"
+      }
+    }
+  },
+  "artifacts": {
+    "descent_hazard_detection": "reports/mission/descent_hazard_report.json",
+    "site_selection": "reports/mission/site_ranking.json",
+    "lola_lroc_quality": "reports/mission/lola_lroc_quality.json",
+    "rover_plan": "reports/mission/rover_plan.json",
+    "route_quality": "reports/mission/route_quality.json",
+    "rover_route_map": "reports/mission/rover_route_map.png",
+    "mission_status_json": "reports/mission/mission_status_report.json",
+    "mission_status_markdown": "reports/mission/mission_status_report.md"
+  },
+  "warnings": [
+    "Risultati preliminari, non certificati per operazioni reali.",
+    "Georeferenziazione e frame fisico lunare non validati indipendentemente.",
+    "L'allocazione multi-rover usa distanze euclidee, non percorsi DEM.",
+    "Il journal è locale e non si connette a nodi P-System remoti."
+  ]
+}

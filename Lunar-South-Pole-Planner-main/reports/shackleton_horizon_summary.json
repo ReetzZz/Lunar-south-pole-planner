@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-10-24T14:30:47.647436+00:00",
+  "site_name": "Shackleton — candidato provvisorio",
+  "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "observer": {
+    "x_m": -1000.037,
+    "y_m": -7000.346,
+    "elevation_m": 771.043212890625,
+    "height_above_dem_m": 0.0,
+    "row": 1600,
+    "col": 1599
+  },
+  "parameters": {
+    "azimuth_step_deg": 2.0,
+    "max_distance_m": 7000.0,
+    "dem_pixel_size_m": 5.0
+  },
+  "results": {
+    "azimuth_count": 180,
+    "valid_azimuth_fraction": 1.0,
+    "mean_horizon_deg": 5.992517987871065,
+    "max_horizon_deg": 35.331390263367716,
+    "mean_zero_density_fraction": 0.9138174603174605,
+    "mean_dem_error_m": 0.4511419770498242,
+    "maximum_angle_azimuth_deg": 274.0,
+    "maximum_angle_distance_m": 5.0
+  },
+  "georeference_validated": false,
+  "warnings": [
+    "Analisi diagnostica: georeferenziazione lunare non validata.",
+    "Il campionamento del profilo può non rilevare ostacoli più stretti del passo.",
+    "L'orizzonte geometrico non include rifrazione, libratione o occultazioni astronomiche."
+  ],
+  "interpretation_note": "Il profilo è un risultato diagnostico del DEM. Non costituisce una previsione certificata dell'illuminazione o una validazione della posizione lunare.",
+  "outputs": [
+    "reports/shackleton_horizon_polar.png",
+    "reports/shackleton_horizon_distance.png"
+  ]
+}

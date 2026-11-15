@@ -1,0 +1,44 @@
+{
+  "schema": "lunar-rover-energy-assessment/1.0",
+  "generated_utc": "2026-10-26T06:23:53.852652+00:00",
+  "status": "preliminary_estimate",
+  "route_plan": "reports/mission/rover_plan.json",
+  "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "route_cells": 22,
+  "segments": 21,
+  "distance_m": 133.995,
+  "positive_ascent_m": 0.0,
+  "negative_descent_m": 36.176,
+  "lunar_gravity_m_s2": 1.62,
+  "inputs": {
+    "mass_kg": 120.0,
+    "rolling_resistance_coefficient": 0.08,
+    "drivetrain_efficiency": 0.7,
+    "auxiliary_power_w": 25.0,
+    "mission_duration_hours": 48.0,
+    "battery_capacity_wh": 1200.0,
+    "reserve_percent": 20.0
+  },
+  "energy_wh": {
+    "rolling_resistance_before_drivetrain": 0.5789,
+    "positive_climb_before_drivetrain": 0.0,
+    "traction_after_drivetrain": 0.8269,
+    "auxiliary_load": 1200.0,
+    "total_estimated": 1200.8269,
+    "usable_battery_after_reserve": 960.0,
+    "remaining_after_estimate": -240.8269,
+    "within_budget": false
+  },
+  "assumptions": [
+    "La resistenza al rotolamento usa coefficiente costante e carico normale pari a massa x gravità lunare.",
+    "Il lavoro contro gravità include solo dislivello positivo; nessun recupero in discesa è accreditato.",
+    "La potenza ausiliaria è costante per tutta la durata indicata.",
+    "Non sono modellati accelerazione, sterzata, slittamento, sinkage, deformazione del suolo, temperatura, degradazione batteria o margini di incertezza DEM.",
+    "Nessun contributo solare è sottratto: la visibilità solare diagnostica non è una stima validata della potenza generata.",
+    "Il risultato non è un modello qualificato per operazioni reali; parametri e percorso devono essere validati."
+  ],
+  "warnings": [
+    "Frame geodetico del DEM non validato indipendentemente.",
+    "Stima di progetto preliminare; non usare come certificazione di autonomia o sicurezza del rover."
+  ]
+}

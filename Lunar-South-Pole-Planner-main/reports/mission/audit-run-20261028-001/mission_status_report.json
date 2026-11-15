@@ -1,0 +1,110 @@
+{
+  "report_schema": "lunar-south-pole-mission-report/1.0",
+  "run_id": "95ef6e7b-46c9-4c54-8d18-91de349c59bf",
+  "generated_utc": "2026-10-28T00:14:03.359746+00:00",
+  "mission": {
+    "site_name": "non specificato",
+    "planning_date": "2026-10-28",
+    "horizon_hours": 48
+  },
+  "astronomy": {
+    "source": "observations already loaded in the application; no network request performed",
+    "site_matches_current_selection": false,
+    "sun_observations": [],
+    "earth_observations": [],
+    "warning": "Geometric observations do not alone establish solar power or RF link availability."
+  },
+  "terrain": {
+    "rasters": {
+      "LOLA": {
+        "path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+        "exists": true,
+        "size_bytes": 40980806,
+        "metadata_audit": "available via GUI audit",
+        "physical_georeference_validated": false
+      },
+      "LROC": {
+        "path": "data/terrain/reference-lroc/NAC_DTM_ESALL_SR12.TIF",
+        "exists": true,
+        "size_bytes": 25020674,
+        "metadata_audit": "available via GUI audit",
+        "physical_georeference_validated": false
+      }
+    },
+    "physical_georeference_validated": false,
+    "warning": "CRS metadata and grid compatibility do not independently validate the physical lunar frame."
+  },
+  "rover_plan": {
+    "available": false,
+    "summary": null,
+    "read_error": "file non presente"
+  },
+  "energy_assessment": {
+    "available": false,
+    "summary": null,
+    "path": null,
+    "read_error": "valutazione energetica non configurata"
+  },
+  "psystem_journal": {
+    "status": "disabled",
+    "path": null,
+    "event_lines": 0,
+    "current_run_event_lines": 0,
+    "read_error": null,
+    "remote_node_connected": false
+  },
+  "limitations": [
+    "Geodetic alignment of LOLA/LROC and candidate coordinates is not independently validated.",
+    "No power-system model, RF link budget, rover dynamics, or multi-rover coordination is certified by this report.",
+    "Missing measurements remain missing; no placeholder scientific values are inferred.",
+    "The P-System journal is local unless a real remote protocol integration is configured separately."
+  ],
+  "site_selection": {
+    "status": "not_configured",
+    "candidates_ranked": 0,
+    "terrain_class_summary": {},
+    "top_candidate": null,
+    "report_file": null,
+    "warnings": [],
+    "safety_note": "La selezione è preliminare e basata sulle metriche e soglie configurate; non certifica l'idoneità operativa del sito."
+  },
+  "orchestration": {
+    "status": "completed_preliminary",
+    "steps": {
+      "descent_hazard_detection": {
+        "status": "success",
+        "result": {
+          "decision": "EVITARE",
+          "decision_reasons": [
+            "Pendenza 23.173° oltre soglia 15.000°.",
+            "Rugosità proxy 14.998 m oltre soglia 1.000 m."
+          ],
+          "coverage_fraction": 1.0,
+          "report_file": "reports/mission/audit-run-20261028-001/descent_hazard_report.json",
+          "status": "preliminary"
+        }
+      }
+    },
+    "artifacts": {
+      "descent_hazard_detection": "reports/mission/audit-run-20261028-001/descent_hazard_report.json",
+      "mission_status_json": "reports/mission/audit-run-20261028-001/mission_status_report.json",
+      "mission_status_markdown": "reports/mission/audit-run-20261028-001/mission_status_report.md"
+    },
+    "warnings": [
+      "Risultati preliminari, non certificati per operazioni reali.",
+      "Georeferenziazione e frame fisico lunare non validati indipendentemente.",
+      "L'allocazione multi-rover usa distanze euclidee, non percorsi DEM.",
+      "Il journal è locale e non si connette a nodi P-System remoti."
+    ],
+    "execution_summary": {
+      "step_count": 1,
+      "status_counts": {
+        "success": 1
+      },
+      "artifact_count": 3,
+      "warning_count": 4,
+      "preliminary_steps": [],
+      "failed_steps": []
+    }
+  }
+}

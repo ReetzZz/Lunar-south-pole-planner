@@ -1,0 +1,1064 @@
+<!-- Last updated: 2026-11-14 -->
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUNAR // Mission Control</title>
+<style>
+:root{color-scheme:dark;--bg:#060a10;--panel:#0b121c;--line:#1c2c3c;--cyan:#5be7f5;--muted:#8295a9;--amber:#f4b95f;--green:#76e5b0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#e8f1fa;font:13px Inter,Segoe UI,Arial,sans-serif;overflow:hidden}
+button,select,input{font:inherit;color:inherit;background:#0c1723;border:1px solid #24394c;border-radius:4px;padding:9px}
+button{cursor:pointer}button:hover{border-color:var(--cyan);color:var(--cyan)}
+header{height:65px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:#080e16}
+.brand{font-size:16px;letter-spacing:3px;font-weight:800}.brand span{color:var(--cyan)}
+.sub{color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:5px}
+.live{color:var(--green);letter-spacing:1px}
+main{height:calc(100vh - 65px);padding:12px;display:grid;gap:12px;grid-template-columns:245px minmax(300px,1fr) 270px;grid-template-rows:minmax(300px,1fr) 190px}
+.panel{background:linear-gradient(145deg,#0d1621,#090f17);border:1px solid var(--line);border-radius:7px;min-width:0;min-height:0;overflow:hidden}
+.panelhead{height:42px;border-bottom:1px solid var(--line);padding:0 13px;display:flex;align-items:center;justify-content:space-between;font-size:10px;letter-spacing:1.7px;font-weight:700}
+.tag{font-size:9px;color:var(--cyan);border:1px solid #21424d;padding:4px 6px;border-radius:3px}
+.left{grid-column:1;grid-row:1/3}.center{grid-column:2;grid-row:1}.right{grid-column:3;grid-row:1/3}.bottom{grid-column:2;grid-row:2}
+.inner{padding:14px}.label{color:var(--muted);font-size:10px;letter-spacing:1.1px;margin:14px 0 7px}
+select,input{width:100%}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.action{width:100%;margin-top:10px;background:#10303b;border-color:#286574;color:#8ff2fa;font-weight:700;letter-spacing:1px}
+.secondary{width:100%;margin-top:8px}
+.note{font-size:10px;color:var(--muted);line-height:1.6;margin-top:16px}
+.scene{position:relative;height:calc(100% - 42px);min-height:0;background:radial-gradient(ellipse at 50% 48%,#142638 0%,#080f19 48%,#050910 100%)}
+#viewport{width:100%;height:100%;display:block}
+.overlay{position:absolute;pointer-events:none;left:15px;top:14px;color:var(--muted);font-size:10px;line-height:1.9;letter-spacing:1px}
+.scenefoot{position:absolute;bottom:12px;left:15px;right:15px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;letter-spacing:1px;pointer-events:none}
+.metric{padding:13px;border-bottom:1px solid var(--line)}
+.metric small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px}
+.metric strong{display:inline-block;font-size:23px;font-weight:500;margin-top:8px;letter-spacing:-.5px}
+.unit{color:var(--cyan);font-size:11px;margin-left:5px}
+.statusrow{display:flex;justify-content:space-between;margin-top:12px;font-size:11px}
+.good{color:var(--green)}.warn{color:var(--amber)}
+.bottomgrid{display:grid;grid-template-columns:1fr 1fr;height:calc(100% - 42px)}
+.graph{padding:12px;border-right:1px solid var(--line);min-width:0}
+.graph:last-child{border:0}
+.graphname{font-size:10px;letter-spacing:1px;color:var(--muted);margin-bottom:10px}
+canvas.chart{width:100%;height:115px;display:block}
+.assetlist{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.asset{font-size:10px;border:1px solid #253748;padding:6px;color:#afc2d4;border-radius:3px}
+#message{font-size:10px;color:var(--muted);line-height:1.5;margin-top:10px}
+
+main{grid-template-rows:minmax(300px,1fr) 270px}
+.bottomgrid{height:auto;grid-template-columns:1fr 1fr}
+canvas.chart{height:78px}
+.windows-section{padding:0 12px 9px}
+.windows-heading{display:flex;justify-content:space-between;align-items:center;
+ font-size:10px;letter-spacing:1.3px;font-weight:700;margin:3px 0 7px}
+.windows-table-wrap{max-height:91px;overflow:auto;border:1px solid var(--line);border-radius:4px}
+.windows-table{width:100%;border-collapse:collapse;font-size:10px;white-space:nowrap}
+.windows-table th{position:sticky;top:0;background:#101c29;color:var(--muted);
+ text-align:left;font-size:9px;letter-spacing:.6px;padding:6px}
+.windows-table td{padding:6px;border-top:1px solid #192838}
+.windows-table tbody tr:hover{background:#10202d}
+.empty-windows{text-align:center;color:var(--muted);padding:12px!important}
+.window-ok{color:var(--green)}
+.window-notice{font-size:9px;color:var(--muted);margin-top:5px}
+@media(max-width:1000px){
+ main{grid-template-rows:minmax(300px,1fr) 270px auto}
+ .bottomgrid{grid-template-columns:1fr 1fr}
+ .windows-table-wrap{max-height:130px}
+}
+@media(max-width:1000px){body{overflow:auto}main{height:auto;grid-template-columns:210px 1fr;grid-template-rows:520px 240px auto}.left{grid-column:1;grid-row:1/3}.center{grid-column:2;grid-row:1}.right{grid-column:1/3;grid-row:3}.bottom{grid-column:2;grid-row:2}.scene{height:475px}}
+</style>
+
+<style>
+.analytics-section{margin:18px 0;padding:16px;border:1px solid #263b50;border-radius:9px;background:rgba(10,22,36,.72)}
+.analytics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.analytics-card{min-width:0;padding:13px;border:1px solid #263b50;border-radius:7px;background:#101e2d}
+.analytics-card small{display:block;color:#8295a9;font-size:10px;letter-spacing:1px}
+.analytics-card strong{display:block;margin:9px 0 5px;color:#e8f1fa;font-size:20px;overflow-wrap:anywhere}
+.analytics-card span{color:#9aafc2;font-size:11px}
+@media(max-width:900px){.analytics-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.engineering-section{margin:14px 12px;padding:13px;border:1px solid #263b50;border-radius:8px;background:rgba(10,22,36,.72)}
+.engineering-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:12px}
+.engineering-grid label{display:block;min-width:0;color:#9aafc2;font-size:10px}
+.engineering-grid input{display:block;width:100%;margin-top:5px;padding:7px;font-size:11px}
+.engineering-result{margin-top:10px;color:#9aafc2;font-size:11px;line-height:1.6}
+.engineering-results{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.engineering-results>div{min-width:0;padding:9px;border:1px solid #263b50;border-radius:5px;background:#101e2d}
+.engineering-results small{display:block;color:#8295a9;font-size:9px}
+.engineering-results strong{display:block;margin-top:7px;font-size:15px;overflow-wrap:anywhere}
+.thermal-chart{display:block;width:100%;height:150px;margin-top:12px}
+.bottom{overflow-y:auto;overflow-x:hidden}
+@media(max-width:900px){.engineering-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.engineering-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+</style>
+
+
+<style>
+@media (min-width:1001px) {
+ main {
+  grid-template-rows:minmax(220px,1fr) 12px minmax(180px,270px);
+ }
+ .left,.right { grid-row:1/4; }
+ .center { grid-column:2; grid-row:1; }
+ .mission-splitter {
+  grid-column:2;
+  grid-row:2;
+  min-height:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:row-resize;
+  touch-action:none;
+  user-select:none;
+  position:relative;
+  z-index:5;
+ }
+ .mission-splitter span {
+  width:64px;
+  height:5px;
+  border-radius:8px;
+  background:#315366;
+  transition:background .15s,width .15s;
+ }
+ .mission-splitter:hover span,
+ .mission-splitter:focus span,
+ .mission-splitter.dragging span {
+  width:90px;
+  background:var(--cyan);
+ }
+ .mission-splitter:focus { outline:none; }
+ .bottom { grid-column:2; grid-row:3; }
+}
+@media (max-width:1000px) {
+ .mission-splitter { display:none; }
+}
+</style>
+
+<style>
+body.home-mode main{display:none!important}
+body:not(.home-mode) .home-screen{display:none!important}
+body.home-mode #openHome{display:none}
+#openHome{margin-left:16px;padding:9px 15px;color:#8ff2fa;background:#10303b;border:1px solid #286574;border-radius:5px}
+.home-screen{min-height:calc(100vh - 65px);padding:clamp(20px,4vw,52px);overflow:auto;background:radial-gradient(ellipse at 50% 0%,#142b40,#080f19 55%,#060a10)}
+.home-content{max-width:1050px;margin:auto}
+.home-intro{text-align:center;padding:25px 0 30px}
+.home-eyebrow{color:var(--cyan);font-size:10px;letter-spacing:3px}
+.home-title{font-size:clamp(27px,4vw,43px);letter-spacing:2px}
+.home-description{color:var(--muted);line-height:1.7;max-width:650px;margin:auto}
+.home-step{margin:22px 0 10px;font-size:11px;letter-spacing:1.5px;color:#b5c9dc;font-weight:700}
+.home-sites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.home-site{text-align:left;padding:18px;min-height:112px;border:1px solid #263b50;border-radius:9px;background:linear-gradient(145deg,#101f2e,#0b131e)}
+.home-site.selected{border-color:var(--cyan);background:#102a37}
+.home-site strong{display:block;font-size:16px;margin-bottom:9px}
+.home-site span{color:var(--muted);font-size:11px;line-height:1.5}
+.home-site .site-check{float:right;color:var(--cyan);opacity:0}
+.home-site.selected .site-check{opacity:1}
+.home-options{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:19px;border:1px solid #263b50;border-radius:9px;background:#0b141f}
+.home-options label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px}
+.home-options input{display:block;width:100%;margin-top:8px}
+.home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}
+.home-actions button{min-height:49px;border-radius:6px;font-weight:800;letter-spacing:1px}
+.home-primary{background:#103541;border:1px solid #327181;color:#9af5fa}
+.home-secondary{background:#101c29;border:1px solid #263b50;color:#c0d0df}
+#homeError{min-height:18px;margin-top:10px;color:#f4b95f;text-align:center;font-size:11px}
+.home-help{margin-top:22px;text-align:center;color:var(--muted);font-size:11px;line-height:1.7}
+@media(max-width:700px){.home-sites,.home-options,.home-actions{grid-template-columns:1fr}.home-screen{padding:18px}}
+</style>
+
+
+<style>
+/* LUNAR EXPLORER - modalità pubblica */
+#modeToggle {
+ margin-left:16px;padding:10px 15px;border:1px solid #327181;
+ border-radius:5px;background:#103541;color:#9af5fa;
+ font-weight:800;letter-spacing:1px;white-space:nowrap
+}
+body.public-mode main {
+ height:calc(100vh - 65px);
+ padding:10px;display:grid;grid-template-columns:minmax(0,1fr);
+ grid-template-rows:minmax(0,1fr);gap:0
+}
+body.public-mode .left,
+body.public-mode .right,
+body.public-mode .bottom,
+body.public-mode #missionSplitter {display:none!important}
+body.public-mode .center {
+ grid-column:1;grid-row:1;min-height:0;display:flex;flex-direction:column
+}
+body.public-mode .center .panelhead {flex:0 0 42px}
+body.public-mode .center .scene {
+ flex:1;height:auto;min-height:0;position:relative
+}
+body.public-mode .overlay {z-index:1}
+.public-ui {
+ position:absolute;z-index:3;right:20px;top:18px;
+ width:min(310px,calc(100% - 30px));max-height:calc(100% - 36px);
+ overflow:auto;padding:19px;border:1px solid #36536a;border-radius:10px;
+ background:rgba(7,16,27,.94);box-shadow:0 12px 40px #0009;
+ backdrop-filter:blur(12px)
+}
+.public-eyebrow {font-size:9px;letter-spacing:2px;color:var(--cyan)}
+.public-ui h2 {font-size:22px;margin:10px 0}
+.public-ui p {font-size:11px;line-height:1.6;color:#a9bacb}
+.public-label {font-size:9px;letter-spacing:1.5px;color:#91a8bb;margin:17px 0 8px}
+.public-sites {display:grid;gap:7px}
+.public-site {
+ width:100%;padding:11px;text-align:left;border:1px solid #2b4053;
+ border-radius:6px;background:#101e2d
+}
+.public-site strong,.public-site span {display:block}
+.public-site strong {font-size:12px}
+.public-site span {font-size:10px;color:#91a8bb;margin-top:4px}
+.public-site.selected {border-color:var(--cyan);background:#12303b}
+.public-facts {display:grid;gap:8px;margin-top:15px}
+.public-facts div {padding:10px;border:1px solid #263b50;border-radius:5px;background:#0c1926}
+.public-facts span,.public-facts strong {display:block}
+.public-facts span {font-size:9px;color:#91a8bb;letter-spacing:1px}
+.public-facts strong {font-size:11px;margin-top:5px}
+.public-analyze,.education-toggle {
+ width:100%;padding:12px;margin-top:12px;border-radius:5px;
+ font-size:10px;font-weight:800;letter-spacing:1px
+}
+.public-analyze {background:#103541;border:1px solid #327181;color:#9af5fa}
+.education-toggle {background:#101e2d;border:1px solid #2b4053}
+#educationText {font-size:11px;line-height:1.7;color:#b4c6d7;margin-top:12px}
+#publicMessage {font-size:10px;color:var(--amber);margin-top:8px}
+body:not(.public-mode) .public-ui {display:none}
+@media(max-width:700px) {
+ body.public-mode main {padding:5px}
+ .public-ui {right:10px;top:10px;width:min(270px,calc(100% - 20px));padding:13px}
+ .public-ui h2 {font-size:18px}
+}
+</style>
+
+
+<style>
+/* PROFILO UTENTE E NAVIGAZIONE */
+body.profile-home main,
+body.educator-mode main {display:none!important}
+body.profile-home #profileHome {display:flex}
+body:not(.profile-home) #profileHome {display:none}
+body.educator-mode #educatorHome {display:block}
+body:not(.educator-mode) #educatorHome {display:none}
+
+#changeProfile {
+ margin-left:16px;padding:10px 15px;
+ border:1px solid #327181;border-radius:5px;
+ background:#103541;color:#9af5fa;
+ font-weight:800;letter-spacing:1px;white-space:nowrap
+}
+body.profile-home #changeProfile {display:none}
+
+.profile-home {
+ min-height:calc(100vh - 65px);
+ align-items:center;justify-content:center;
+ padding:35px 20px;
+ background:radial-gradient(ellipse at 50% 35%,#172d40,#080f19 65%,#060a10)
+}
+.profile-content {width:100%;max-width:1080px;margin:auto;text-align:center}
+.profile-eyebrow {color:var(--cyan);font-size:10px;letter-spacing:3px}
+.profile-content h1,.educator-content h1 {
+ font-size:clamp(25px,4vw,42px);letter-spacing:2px;margin:15px 0
+}
+.profile-subtitle {color:#a9bacb;font-size:14px}
+.profile-question {margin:48px 0 20px;font-size:11px;font-weight:800;letter-spacing:2px}
+.profile-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.profile-card {
+ display:flex;flex-direction:column;align-items:flex-start;
+ min-height:245px;text-align:left;padding:24px;
+ border:1px solid #2a4054;border-radius:10px;
+ background:linear-gradient(145deg,#122334,#0a131e);
+ transition:border-color .18s,transform .18s,background .18s
+}
+.profile-card:hover {border-color:var(--cyan);background:#132b3b;transform:translateY(-3px)}
+.profile-icon {font-size:30px;color:var(--cyan);margin-bottom:22px}
+.profile-card strong {font-size:15px;letter-spacing:1px;margin-bottom:13px}
+.profile-card>span:nth-of-type(2) {font-size:12px;line-height:1.7;color:#9cafc1}
+.profile-enter {margin-top:auto;padding-top:23px;color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:1px}
+.profile-footer {margin-top:40px;color:#61788d;font-size:9px;letter-spacing:2px}
+
+.educator-home {
+ min-height:calc(100vh - 65px);overflow:auto;
+ padding:clamp(25px,5vw,65px);
+ background:radial-gradient(ellipse at 50% 0%,#172d40,#080f19 65%)
+}
+.educator-content {max-width:1050px;margin:auto}
+.educator-content>p {color:#a9bacb;line-height:1.7}
+.lesson-grid {display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:30px}
+.lesson-card {padding:23px;border:1px solid #2a4054;border-radius:9px;background:#0d1926}
+.lesson-card>span {font-size:9px;color:var(--cyan);letter-spacing:1.5px}
+.lesson-card h2 {font-size:18px}
+.lesson-card p {font-size:12px;color:#a9bacb;line-height:1.7}
+.educator-note {margin:25px 0;color:#8196a9;font-size:11px}
+.profile-back {padding:11px 18px;background:#103541;border:1px solid #327181;border-radius:5px;color:#9af5fa}
+@media(max-width:760px) {
+ .profile-cards,.lesson-grid {grid-template-columns:1fr}
+ .profile-card {min-height:190px}
+ .profile-question {margin-top:30px}
+}
+</style>
+
+<style>
+/* MISSION CONTROL AUTHENTICATION & ACCESS CLEARANCE */
+body.planner-login main,
+body.planner-login #educatorHome,
+body.planner-login #profileHome {display:none!important}
+body.planner-login #missionLogin {display:flex!important}
+body:not(.planner-login) #missionLogin {display:none!important}
+
+.mission-login {
+ min-height:calc(100vh - 65px);
+ align-items:center;
+ justify-content:center;
+ padding:28px 16px;
+ background:radial-gradient(ellipse at 50% 35%,#172d40,#080f19 65%,#060a10);
+ overflow-y:auto;
+}
+.login-card {
+ width:min(100%,480px);
+ padding:30px;
+ border:1px solid #2a4054;
+ border-radius:10px;
+ background:linear-gradient(145deg,#122334,#0a131e);
+ box-shadow:0 18px 55px rgba(0,0,0,0.65);
+}
+.login-symbol {font-size:32px;color:var(--cyan);margin-bottom:8px}
+.login-card h1 {
+ margin:0 0 8px;
+ font-size:clamp(20px,3vw,26px);
+ letter-spacing:1.5px;
+}
+.login-description {
+ color:#9cafc1;
+ font-size:12px;
+ line-height:1.6;
+ margin-bottom:18px;
+}
+.login-label {
+ display:block;
+ margin:13px 0 6px;
+ color:#9cafc1;
+ font-size:10px;
+ letter-spacing:1.2px;
+ font-weight:700;
+}
+.login-card input {
+ width:100%;
+ padding:11px 13px;
+ border:1px solid #2a4054;
+ background:#08121d;
+ color:#e8f1fa;
+ border-radius:4px;
+ font-size:13px;
+}
+.login-card input:focus {
+ outline:1px solid var(--cyan);
+ border-color:var(--cyan);
+}
+.login-submit {
+ width:100%;
+ margin-top:16px;
+ padding:13px;
+ border:1px solid #327181;
+ border-radius:5px;
+ background:#103541;
+ color:#9af5fa;
+ font-weight:800;
+ letter-spacing:1px;
+ transition:background .15s,border-color .15s;
+}
+.login-submit:hover {
+ background:#154756;
+ border-color:var(--cyan);
+}
+#missionLoginMessage {
+ min-height:22px;
+ margin-top:10px;
+ font-size:11px;
+ text-align:center;
+ line-height:1.5;
+}
+.login-generator-box {
+ margin-top:18px;
+ padding:14px;
+ border:1px dashed #284457;
+ border-radius:6px;
+ background:#08131e;
+}
+.login-gen-title {
+ font-size:10px;
+ font-weight:700;
+ color:var(--cyan);
+ letter-spacing:1px;
+ margin-bottom:8px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+.preset-badges-wrap {
+ display:flex;
+ flex-wrap:wrap;
+ gap:6px;
+ margin-bottom:10px;
+}
+.preset-badge-btn {
+ padding:6px 10px;
+ font-size:10px;
+ border:1px solid #284558;
+ background:#0e1d2c;
+ color:#b6cbde;
+ border-radius:4px;
+ cursor:pointer;
+ transition:all .15s;
+}
+.preset-badge-btn:hover {
+ border-color:var(--cyan);
+ color:var(--cyan);
+ background:#12283a;
+}
+.gen-code-btn {
+ width:100%;
+ padding:9px 12px;
+ background:#102231;
+ border:1px solid #294c63;
+ color:#9bd9f1;
+ font-size:10px;
+ letter-spacing:1px;
+ font-weight:700;
+ border-radius:4px;
+ cursor:pointer;
+ transition:all .15s;
+}
+.gen-code-btn:hover {
+ border-color:var(--cyan);
+ background:#153247;
+ color:#fff;
+}
+.login-back {
+ width:100%;
+ margin-top:10px;
+ text-align:center;
+}
+</style>
+
+</head>
+<body>
+<header>
+ <div><div class="brand"><span>◈</span> LUNAR <span style="color:#e8f1fa">MISSION CONTROL</span></div><div class="sub">SOUTH POLE OPERATIONS // MISSION PLANNER</div></div>
+ <div style="display:flex;align-items:center;gap:12px">
+  <div id="operatorBadge" style="display:none;align-items:center;gap:8px">
+   <span style="font-size:10px;color:var(--cyan);border:1px solid #21424d;background:#0a1724;padding:4px 8px;border-radius:4px;font-weight:700;letter-spacing:1px">
+    OP: <span id="operatorCallsignText">AUTH</span>
+   </span>
+   <button type="button" id="revokeClearanceBtn" style="padding:5px 9px;font-size:9px;color:var(--amber);border:1px solid #5a3c18;background:#181005;border-radius:3px;cursor:pointer" title="Revoca clearance ed esci">REVOCA CLEARANCE</button>
+  </div>
+  <div style="text-align:right"><div class="live">● SYSTEM ONLINE</div><div class="sub">NASA LRO DATASET · WEBGL VIEWPORT</div></div>
+  <button type="button" id="changeProfile">CAMBIA PROFILO</button>
+ </div>
+</header>
+
+<section id="profileHome" class="profile-home">
+ <div class="profile-content">
+  <div class="profile-eyebrow">LUNAR SOUTH POLE · EXPLORATION PLATFORM</div>
+  <h1>LUNAR SOUTH POLE PLANNER</h1>
+  <p class="profile-subtitle">Esplora, comprendi e pianifica le missioni lunari.</p>
+  <div class="profile-question">COME VUOI UTILIZZARE LA PIATTAFORMA?</div>
+
+  <div class="profile-cards">
+   <button class="profile-card" type="button" data-profile="public">
+    <span class="profile-icon">◉</span>
+    <strong>PUBBLICO</strong>
+    <span>Confronta i siti di atterraggio e le date. Scopri le condizioni di illuminazione e comunicazione.</span>
+    <span class="profile-enter">PUBLIC EXPLORER →</span>
+   </button>
+
+   <button class="profile-card" type="button" data-profile="educator">
+    <span class="profile-icon">⌘</span>
+    <strong>EDUCATORE</strong>
+    <span>Scopri la scienza lunare, i vincoli ambientali e perché alcuni siti sono più adatti di altri.</span>
+    <span class="profile-enter">EDUCATIONAL EXPLORER →</span>
+   </button>
+
+   <button class="profile-card" type="button" data-profile="planner">
+    <span class="profile-icon">⌖</span>
+    <strong>PIANIFICATORE DI MISSIONE</strong>
+    <span>Accedi ai dati astronomici, alle analisi e alle simulazioni ingegneristiche avanzate.</span>
+    <span class="profile-enter">MISSION CONTROL →</span>
+   </button>
+  </div>
+  <div class="profile-footer">ONE LUNAR PLATFORM · THREE EXPERIENCES</div>
+ </div>
+</section>
+
+<section id="missionLogin" class="mission-login" aria-labelledby="missionLoginTitle">
+ <div class="login-card">
+  <div class="profile-eyebrow">LUNAR SOUTH POLE · RESTRICTED CLEARANCE</div>
+  <div class="login-symbol">◈</div>
+  <h1 id="missionLoginTitle">MISSION CONTROL ACCESS</h1>
+  <p class="login-description">L'accesso alle simulazioni ingegneristiche avanzate, pianificazione rover e calcoli orbitali richiede una clearance da operatore di missione.</p>
+
+  <form id="missionLoginForm">
+   <label class="login-label" for="missionUsername">OPERATOR CALL SIGN / ID</label>
+   <input id="missionUsername" name="username" type="text"
+          autocomplete="username" placeholder="es. FLIGHT-DIR-1 o tuo ID" required>
+
+   <label class="login-label" for="missionCode">MISSION AUTHORIZATION CODE</label>
+   <input id="missionCode" name="code" type="text"
+          autocomplete="off" placeholder="es. ARTEMIS-DIR-9021 o codice generato" required>
+
+   <button class="login-submit" type="submit">AUTENTICA & ACCEDI A MISSION CONTROL →</button>
+   <div id="missionLoginMessage" role="status" aria-live="polite"></div>
+  </form>
+
+  <div class="login-generator-box">
+   <div class="login-gen-title">
+    <span>ACCREDITI OPERATIVI PREDEFINITI (HACKATHON DEMO)</span>
+   </div>
+   <div class="preset-badges-wrap">
+    <button type="button" class="preset-badge-btn" data-preset-user="FLIGHT-DIR-1" data-preset-code="ARTEMIS-DIR-9021">Flight Director</button>
+    <button type="button" class="preset-badge-btn" data-preset-user="NAV-LEAD" data-preset-code="LUNAR-NAV-4410">Nav Specialist</button>
+    <button type="button" class="preset-badge-btn" data-preset-user="SYS-ENG" data-preset-code="APOLLO-SYS-8823">Systems Lead</button>
+    <button type="button" class="preset-badge-btn" data-preset-user="HACKATHON-JUDGE" data-preset-code="HACKATHON-2026">Judge Access</button>
+   </div>
+   <button type="button" class="gen-code-btn" id="generateCodeBtn">GENERA NUOVO CODICE AUTORIZZAZIONE</button>
+  </div>
+
+  <button class="profile-back login-back" id="loginBack" type="button">← TORNA ALLA SCELTA PROFILO</button>
+ </div>
+</section>
+
+
+<section id="educatorHome" class="educator-home">
+ <div class="educator-content">
+  <div class="profile-eyebrow">LUNAR SOUTH POLE · LEARNING CENTER</div>
+  <h1>EDUCATIONAL EXPLORER</h1>
+  <p>Comprendi le sfide che rendono difficile pianificare una missione al polo sud lunare.</p>
+
+  <div class="lesson-grid">
+   <article class="lesson-card">
+    <span>01 · ILLUMINAZIONE</span>
+    <h2>La luce del Sole</h2>
+    <p>Perché alcuni luoghi ricevono luce solare per periodi più lunghi mentre altri rimangono in ombra?</p>
+   </article>
+   <article class="lesson-card">
+    <span>02 · COMUNICAZIONI</span>
+    <h2>La Terra all'orizzonte</h2>
+    <p>Perché la posizione della Terra rispetto all'orizzonte influenza le comunicazioni dirette?</p>
+   </article>
+   <article class="lesson-card">
+    <span>03 · TERRENO</span>
+    <h2>Ombre e morfologia</h2>
+    <p>Come pendii, crateri e ostacoli possono influenzare la scelta di una zona di atterraggio?</p>
+   </article>
+   <article class="lesson-card">
+    <span>04 · PIANIFICAZIONE</span>
+    <h2>Perché scegliere un sito?</h2>
+    <p>Come si bilanciano illuminazione, comunicazioni, sicurezza e obiettivi scientifici?</p>
+   </article>
+  </div>
+  <p class="educator-note">Le spiegazioni e le simulazioni didattiche saranno collegate progressivamente ai dati scientifici della piattaforma.</p>
+  <button type="button" class="profile-back" id="educatorBack">← CAMBIA PROFILO</button>
+ </div>
+</section>
+
+<main>
+ <section class="panel left">
+  <div class="panelhead">MISSION CONFIGURATION <span class="tag">01 / SETUP</span></div>
+  <div class="inner">
+   <div class="label">TARGET LANDING SITE</div>
+   <select id="site"><option>Shackleton</option><option>Connecting Ridge</option><option>Nobile</option></select>
+   <div class="label">MISSION START (UTC)</div><input id="date" type="datetime-local">
+   <div class="twocol"><div><div class="label">DURATION · HOURS</div><input id="duration" type="number" value="48" min="1" max="720"></div><div><div class="label">MIN. SUN ELEVATION</div><input id="elevation" type="number" value="5" min="-90" max="90"></div></div>
+    <div class="label">MIN. EARTH ELEVATION</div><input id="earthElevation" type="number" value="5" min="-90" max="90">
+   <div class="label">MISSION PRIORITIES</div>
+   <div class="twocol"><div><div class="label">SCIENCE</div><input id="science" type="number" value="5" min="1" max="5"></div><div><div class="label">ENGINEERING</div><input id="engineering" type="number" value="5" min="1" max="5"></div></div>
+   <button class="action" id="apply">UPDATE VISUALIZATION</button>
+   <button class="secondary" id="reset">RESET 3D VIEW</button>
+    <button class="secondary" id="exportMission">EXPORT MISSION JSON</button>
+   <div class="label" style="margin-top:23px">VIEW CONTROLS</div>
+   <div class="note">DRAG · ROTATE MOON<br>SCROLL · ZOOM<br>DOUBLE CLICK · RESET CAMERA</div>
+   <div class="label">SCENE ASSETS</div>
+   <div class="assetlist"><span class="asset">NASA LRO MODEL</span><span class="asset">WEBGL</span></div>
+   <div id="message">Preparing 3D viewport…</div>
+  </div>
+ </section>
+ <section class="panel center">
+  <div class="panelhead">LUNAR SURFACE / 3D EXPLORER <span class="tag">LIVE RENDER</span></div>
+  <div class="scene"><canvas id="viewport"></canvas>
+
+<div id="publicMissionPanel" class="public-ui">
+ <div class="public-eyebrow">LUNAR SOUTH POLE EXPLORER</div>
+ <h2>Esplora la Luna</h2>
+ <p>Seleziona un sito per scoprire le condizioni della regione lunare.</p>
+
+ <div class="public-label">SITI CANDIDATI</div>
+ <div class="public-sites">
+  <button type="button" class="public-site selected" data-public-site="Shackleton" aria-pressed="true">
+   <strong>Shackleton</strong><span>Regione del polo sud</span>
+  </button>
+  <button type="button" class="public-site" data-public-site="Connecting Ridge" aria-pressed="false">
+   <strong>Connecting Ridge</strong><span>Rilievo lunare</span>
+  </button>
+  <button type="button" class="public-site" data-public-site="Nobile" aria-pressed="false">
+   <strong>Nobile</strong><span>Area del polo sud</span>
+  </button>
+ </div>
+
+ <div class="public-facts">
+  <div><span>LUCE SOLARE</span><strong>Analisi astronomica</strong></div>
+  <div><span>VISIBILITÀ DELLA TERRA</span><strong>Analisi geometrica</strong></div>
+ </div>
+
+ <button type="button" id="publicAnalyze" class="public-analyze">ANALIZZA QUESTO SITO</button>
+ <button type="button" id="educationToggle" class="education-toggle">SCOPRI COME FUNZIONA</button>
+ <div id="educationText" hidden>
+  La luce solare può alimentare i sistemi di una missione. La visibilità geometrica della Terra è un elemento importante per pianificare le comunicazioni. Le condizioni cambiano con la posizione e il tempo.
+ </div>
+ <div id="publicMessage" role="status" aria-live="polite"></div>
+</div>
+
+   <div class="overlay">LUNAR SOUTH POLE<br>TOPOGRAPHIC VIEW<br><span style="color:var(--cyan)">●</span> NASA MODEL</div>
+   <div class="scenefoot"><span id="siteLabel">TARGET: SHACKLETON</span><span>INTERACTIVE VIEWPORT</span></div>
+  </div>
+ </section>
+ <section class="panel right">
+  <div class="panelhead">MISSION TELEMETRY <span class="tag">02 / STATUS</span></div>
+  <div class="metric"><small>SELECTED TARGET</small><strong id="targetName" style="font-size:19px">Shackleton</strong><div class="statusrow"><span>Site coordinates</span><span id="coords">Loading…</span></div></div>
+  <div class="metric"><small>MISSION DURATION</small><strong id="durationValue">48</strong><span class="unit">HOURS</span></div>
+  <div class="metric"><small>3D MODEL STATUS</small><div class="statusrow"><span>NASA LRO GLB</span><span id="modelStatus" class="warn">LOADING</span></div><div class="statusrow"><span>WebGL renderer</span><span id="webglStatus" class="good">INITIALIZING</span></div></div>
+  <div class="metric"><small>MISSION PARAMETERS</small><div class="statusrow"><span>Science priority</span><span id="scienceValue">5 / 5</span></div><div class="statusrow"><span>Engineering priority</span><span id="engineeringValue">5 / 5</span></div><div class="statusrow"><span>Sun elevation threshold</span><span id="elevationValue">5°</span></div><div class="statusrow"><span>Earth elevation threshold</span><span id="earthElevationValue">5°</span></div></div>
+  <div class="metric"><small>VISUALIZATION STATUS</small><div class="statusrow"><span>Scene</span><span class="good">ACTIVE</span></div><div class="statusrow"><span>Orbit interaction</span><span class="good">ENABLED</span></div><div class="statusrow"><span>Live ephemerides</span><span class="warn">WAITING</span></div><p class="note">Telemetry values shown here are configuration and rendering status, not live spacecraft measurements.</p></div>
+ </section>
+ <div id="missionSplitter"
+      class="mission-splitter"
+      role="separator"
+      aria-label="Ridimensiona visualizzatore lunare e pannello missione"
+      aria-orientation="horizontal"
+      aria-valuemin="220"
+      aria-valuemax="900"
+      tabindex="0">
+  <span></span>
+ </div>
+ <section class="panel bottom">
+  <div class="panelhead">MISSION OVERVIEW <span class="tag">03 / ANALYSIS</span></div>
+  <div class="bottomgrid">
+   <div class="graph"><div class="graphname">SOLAR ELEVATION · WAITING FOR DATA</div><canvas id="chart1" class="chart"></canvas></div>
+   <div class="graph"><div class="graphname">EARTH ELEVATION · WAITING FOR DATA</div><canvas id="chart2" class="chart"></canvas></div>
+  </div>
+
+  <div class="analytics-section">
+   <div class="windows-heading">
+    <span>MISSION ANALYTICS</span>
+    <span id="analyticsStatus" class="tag">WAITING FOR DATA</span>
+   </div>
+   <div class="analytics-grid">
+    <div class="analytics-card"><small>SUN ELEVATION</small><strong id="sunStats">—</strong><span id="sunPass">—</span></div>
+    <div class="analytics-card"><small>EARTH ELEVATION</small><strong id="earthStats">—</strong><span id="earthPass">—</span></div>
+    <div class="analytics-card"><small>SIMULTANEOUS VISIBILITY</small><strong id="combinedPass">—</strong><span id="combinedCount">—</span></div>
+    <div class="analytics-card"><small>OPERATIONAL WINDOWS</small><strong id="analyticsWindowCount">—</strong><span id="analyticsWindowSpan">—</span></div>
+   </div>
+   <div id="analyticsDiagnosis" class="window-notice">In attesa di campioni astronomici.</div>
+  </div>
+
+
+   <div class="engineering-section">
+    <div class="windows-heading">
+     <span>COMMUNICATION INTELLIGENCE · RF LINK BUDGET</span>
+     <span class="tag">PRELIMINARY MODEL</span>
+    </div>
+    <div class="engineering-grid">
+     <label>Distanza (km)<input id="rfDistance" type="number" value="384400" min="0.001" step="any"></label>
+     <label>Frequenza (GHz)<input id="rfFrequency" type="number" value="8.4" min="0.001" step="any"></label>
+     <label>Potenza TX (dBm)<input id="rfPower" type="number" value="40" step="any"></label>
+     <label>Guadagno antenna TX (dBi)<input id="rfTxGain" type="number" value="30" step="any"></label>
+     <label>Guadagno antenna RX (dBi)<input id="rfRxGain" type="number" value="45" step="any"></label>
+     <label>Perdite sistema (dB)<input id="rfLosses" type="number" value="3" min="0" step="any"></label>
+     <label>Sensibilità RX (dBm)<input id="rfSensitivity" type="number" value="-120" step="any"></label>
+     <label>Margine richiesto (dB)<input id="rfMargin" type="number" value="3" min="0" step="any"></label>
+    </div>
+    <button id="calculateRF" class="action">CALCULATE RF LINK</button>
+    <div id="rfStatus" class="engineering-result">In attesa di calcolo RF.</div>
+    <div class="engineering-results">
+     <div><small>FREE SPACE PATH LOSS</small><strong id="rfPathLoss">—</strong></div>
+     <div><small>RECEIVED POWER</small><strong id="rfReceived">—</strong></div>
+     <div><small>LINK MARGIN</small><strong id="rfLinkMargin">—</strong></div>
+     <div><small>REQUIRED MARGIN CHECK</small><strong id="rfCheck">—</strong></div>
+    </div>
+   </div>
+
+   <div class="engineering-section">
+    <div class="windows-heading">
+     <span>THERMAL INTELLIGENCE · SINGLE NODE</span>
+     <span class="tag">RK4 SIMULATION</span>
+    </div>
+    <div class="engineering-grid">
+     <label>Durata (s)<input id="thDuration" type="number" value="3600" min="1" step="any"></label>
+     <label>Passo (s)<input id="thStep" type="number" value="10" min="0.01" step="any"></label>
+     <label>Temperatura iniziale (K)<input id="thInitial" type="number" value="250" min="0.01" step="any"></label>
+     <label>Capacità termica (J/K)<input id="thCapacity" type="number" value="10000" min="0.001" step="any"></label>
+     <label>Flusso solare (W/m²)<input id="thFlux" type="number" value="1361" min="0" step="any"></label>
+     <label>Area proiettata (m²)<input id="thArea" type="number" value="1" min="0" step="any"></label>
+     <label>Assorbività<input id="thAbsorptivity" type="number" value="0.7" min="0" max="1" step="any"></label>
+     <label>Emissività<input id="thEmissivity" type="number" value="0.8" min="0" max="1" step="any"></label>
+     <label>Area radiatore (m²)<input id="thRadiator" type="number" value="1" min="0" step="any"></label>
+     <label>Potenza interna (W)<input id="thPower" type="number" value="20" min="0" step="any"></label>
+     <label>Temperatura ambiente (K)<input id="thEnvironment" type="number" value="3" min="0.01" step="any"></label>
+     <label>Frazione illuminata<input id="thIllumination" type="number" value="1" min="0" max="1" step="any"></label>
+     <label>Accoppiamento (W/K)<input id="thCoupling" type="number" value="0" min="0" step="any"></label>
+     <label>Temperatura sink (K)<input id="thSink" type="number" value="100" min="0.01" step="any"></label>
+    </div>
+    <button id="calculateThermal" class="action">RUN THERMAL SIMULATION</button>
+    <div id="thermalStatus" class="engineering-result">In attesa di simulazione termica.</div>
+    <div class="engineering-results">
+     <div><small>FINAL TEMPERATURE</small><strong id="thFinal">—</strong></div>
+     <div><small>MINIMUM TEMPERATURE</small><strong id="thMin">—</strong></div>
+     <div><small>MAXIMUM TEMPERATURE</small><strong id="thMax">—</strong></div>
+     <div><small>TIME SAMPLES</small><strong id="thSamples">—</strong></div>
+    </div>
+    <canvas id="thermalChart" class="thermal-chart" aria-label="Andamento della temperatura simulata"></canvas>
+   </div>
+
+   <div class="windows-section">
+   <div class="windows-heading">
+    <span>OPERATIONAL WINDOWS</span>
+    <span id="windowCount" class="tag">WAITING FOR DATA</span>
+   </div>
+   <div class="windows-table-wrap">
+    <table class="windows-table">
+     <thead><tr>
+      <th>#</th><th>START · UTC</th><th>END · UTC</th>
+      <th>SPAN</th><th>MIN SUN</th><th>MIN EARTH</th><th>STATUS</th>
+     </tr></thead>
+     <tbody id="operationalWindows">
+      <tr><td colspan="7" class="empty-windows">In attesa di effemeridi JPL Horizons…</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <div id="windowNotice" class="window-notice">
+    Le finestre geometriche non certificano la disponibilità del collegamento radio.
+   </div>
+  </div>
+ </section>
+</main>
+<script type="importmap">
+{
+  "imports": {
+    "three": "/src/ui_web/node_modules/three/build/three.module.js"
+  }
+}
+</script>
+<script type="module" src="/src/ui_web/main.js"></script>
+
+<script>
+(() => {
+ const main = document.querySelector('main');
+ const splitter = document.getElementById('missionSplitter');
+ if (!main || !splitter) return;
+
+ const desktop = window.matchMedia('(min-width:1001px)');
+ let dragging = false;
+ let startY = 0;
+ let startCenter = 0;
+ let pointerId = null;
+ let centerRatio = null;
+
+ function dimensions() {
+  const style = getComputedStyle(main);
+  const padding = parseFloat(style.paddingTop) +
+                  parseFloat(style.paddingBottom);
+  const gap = parseFloat(style.rowGap) || 12;
+  const handle = splitter.getBoundingClientRect().height;
+  return {
+   usable: main.clientHeight - padding - 2 * gap,
+   handle
+  };
+ }
+
+ function applyRatio(ratio) {
+  const {usable, handle} = dimensions();
+  const minCenter = 220;
+  const minBottom = 180;
+  const maxCenter = usable - handle - minBottom;
+  if (maxCenter < minCenter) return;
+
+  const center = Math.max(
+   minCenter,
+   Math.min(maxCenter, usable * ratio)
+  );
+  const bottom = usable - handle - center;
+
+  main.style.gridTemplateRows =
+   `${center}px ${handle}px ${bottom}px`;
+  centerRatio = center / usable;
+  splitter.setAttribute(
+   'aria-valuenow',
+   String(Math.round(center))
+  );
+ }
+
+ splitter.addEventListener('pointerdown', event => {
+  if (!desktop.matches || event.button !== 0) return;
+
+  const rows = getComputedStyle(main).gridTemplateRows
+   .split(' ')
+   .map(value => parseFloat(value));
+
+  if (rows.length < 3 || !rows.every(Number.isFinite)) return;
+
+  dragging = true;
+  pointerId = event.pointerId;
+  startY = event.clientY;
+  startCenter = rows[0];
+
+  splitter.classList.add('dragging');
+  splitter.setPointerCapture(pointerId);
+  event.preventDefault();
+ });
+
+ splitter.addEventListener('pointermove', event => {
+  if (!dragging || event.pointerId !== pointerId) return;
+
+  const {usable, handle} = dimensions();
+  const minCenter = 220;
+  const maxCenter = usable - handle - 180;
+  const center = Math.max(
+   minCenter,
+   Math.min(maxCenter, startCenter + event.clientY - startY)
+  );
+
+  if (maxCenter >= minCenter) applyRatio(center / usable);
+ });
+
+ function stopDragging(event) {
+  if (!dragging || event.pointerId !== pointerId) return;
+  dragging = false;
+  splitter.classList.remove('dragging');
+  if (splitter.hasPointerCapture(pointerId)) {
+   splitter.releasePointerCapture(pointerId);
+  }
+  pointerId = null;
+ }
+
+ splitter.addEventListener('pointerup', stopDragging);
+ splitter.addEventListener('pointercancel', stopDragging);
+
+ splitter.addEventListener('dblclick', () => {
+  main.style.gridTemplateRows = '';
+  centerRatio = null;
+ });
+
+ splitter.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+  event.preventDefault();
+
+  const rows = getComputedStyle(main).gridTemplateRows
+   .split(' ')
+   .map(value => parseFloat(value));
+
+  if (rows.length < 3 || !rows.every(Number.isFinite)) return;
+
+  const {usable} = dimensions();
+  const change = event.key === 'ArrowUp' ? 25 : -25;
+  applyRatio((rows[0] + change) / usable);
+ });
+
+ window.addEventListener('resize', () => {
+  if (!desktop.matches) {
+   main.style.gridTemplateRows = '';
+   centerRatio = null;
+  } else if (centerRatio !== null) {
+   applyRatio(centerRatio);
+  }
+ });
+})();
+</script>
+
+
+
+<script>
+(() => {
+ const body = document.body;
+ const changeProfile = document.getElementById('changeProfile');
+ const operatorBadge = document.getElementById('operatorBadge');
+ const operatorCallsignText = document.getElementById('operatorCallsignText');
+ const revokeClearanceBtn = document.getElementById('revokeClearanceBtn');
+ const loginForm = document.getElementById('missionLoginForm');
+ const loginMessage = document.getElementById('missionLoginMessage');
+ const usernameInput = document.getElementById('missionUsername');
+ const codeInput = document.getElementById('missionCode');
+ const generateCodeBtn = document.getElementById('generateCodeBtn');
+ const presetButtons = document.querySelectorAll('[data-preset-user]');
+
+ // Codici autorizzati noti di default
+ const defaultValidCodes = new Set([
+  'ARTEMIS-DIR-9021',
+  'LUNAR-NAV-4410',
+  'APOLLO-SYS-8823',
+  'HACKATHON-2026',
+  'NASA-DEMO-2026',
+  'ESA-LUNAR-01'
+ ]);
+
+ function getGeneratedCodes() {
+  try {
+   const saved = JSON.parse(sessionStorage.getItem('lunar_generated_codes') || '[]');
+   return new Set(saved);
+  } catch {
+   return new Set();
+  }
+ }
+
+ function saveGeneratedCode(newCode) {
+  try {
+   const codes = getGeneratedCodes();
+   codes.add(newCode);
+   sessionStorage.setItem('lunar_generated_codes', JSON.stringify(Array.from(codes)));
+  } catch (e) {
+   console.warn('Storage non disponibile:', e);
+  }
+ }
+
+ function getActiveSession() {
+  try {
+   const session = sessionStorage.getItem('lunar_mission_operator');
+   return session ? JSON.parse(session) : null;
+  } catch {
+   return null;
+  }
+ }
+
+ function updateHeaderBadge() {
+  const session = getActiveSession();
+  const inMissionControl = !body.classList.contains('profile-home') &&
+                           !body.classList.contains('planner-login') &&
+                           !body.classList.contains('public-mode') &&
+                           !body.classList.contains('educator-mode');
+
+  if (session && inMissionControl) {
+   if (operatorBadge) operatorBadge.style.display = 'flex';
+   if (operatorCallsignText) operatorCallsignText.textContent = session.callsign || 'AUTH';
+  } else {
+   if (operatorBadge) operatorBadge.style.display = 'none';
+  }
+ }
+
+ function selectProfile(profile) {
+  body.classList.remove('profile-home','public-mode','educator-mode','planner-login');
+
+  if (profile === 'public') {
+   body.classList.add('public-mode');
+   changeProfile.textContent = 'CAMBIA PROFILO';
+   updateHeaderBadge();
+   requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+  } else if (profile === 'educator') {
+   body.classList.add('educator-mode');
+   changeProfile.textContent = 'CAMBIA PROFILO';
+   updateHeaderBadge();
+  } else if (profile === 'planner') {
+   const session = getActiveSession();
+   if (session) {
+    changeProfile.textContent = 'CAMBIA PROFILO';
+    updateHeaderBadge();
+    requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+   } else {
+    body.classList.add('planner-login');
+    changeProfile.textContent = 'CAMBIA PROFILO';
+    if (loginMessage) loginMessage.textContent = '';
+    updateHeaderBadge();
+   }
+  }
+ }
+
+ function showProfileHome() {
+  body.classList.remove('public-mode','educator-mode','planner-login');
+  body.classList.add('profile-home');
+  updateHeaderBadge();
+ }
+
+ function logoutOperator() {
+  try {
+   sessionStorage.removeItem('lunar_mission_operator');
+  } catch {}
+  updateHeaderBadge();
+  showProfileHome();
+ }
+
+ if (generateCodeBtn) {
+  generateCodeBtn.addEventListener('click', () => {
+   const randomNum = Math.floor(1000 + Math.random() * 9000);
+   const newCode = `LSP-AUTH-${randomNum}`;
+   saveGeneratedCode(newCode);
+
+   codeInput.value = newCode;
+   if (!usernameInput.value.trim()) {
+    usernameInput.value = `OPERATOR-${randomNum.toString().slice(-2)}`;
+   }
+
+   loginMessage.style.color = 'var(--cyan)';
+   loginMessage.textContent = `Codice ${newCode} generato e accreditato! Clicca su AUTENTICA per accedere.`;
+  });
+ }
+
+ presetButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+   usernameInput.value = btn.dataset.presetUser;
+   codeInput.value = btn.dataset.presetCode;
+   loginMessage.style.color = 'var(--cyan)';
+   loginMessage.textContent = `Accredito rapido caricato per ${btn.dataset.presetUser}. Clicca su AUTENTICA.`;
+  });
+ });
+
+ if (loginForm) {
+  loginForm.addEventListener('submit', event => {
+   event.preventDefault();
+   const username = usernameInput.value.trim() || 'OPERATOR-01';
+   const code = codeInput.value.trim().toUpperCase();
+
+   const generatedCodes = getGeneratedCodes();
+   const isValid = defaultValidCodes.has(code) || generatedCodes.has(code) || /^LSP-AUTH-\d{4}$/.test(code);
+
+   if (!isValid) {
+    loginMessage.style.color = 'var(--amber)';
+    loginMessage.textContent = 'Clearance negata: codice non autorizzato. Usa un preset o genera un nuovo codice.';
+    return;
+   }
+
+   try {
+    sessionStorage.setItem('lunar_mission_operator', JSON.stringify({
+     callsign: username,
+     code: code,
+     time: new Date().toISOString()
+    }));
+   } catch (e) {
+    console.warn('Storage non persistito:', e);
+   }
+
+   loginMessage.style.color = 'var(--green)';
+   loginMessage.textContent = `Clearance approvata: benvenuto ${username}. Accesso a Mission Control in corso...`;
+
+   setTimeout(() => {
+    body.classList.remove('planner-login');
+    changeProfile.textContent = 'CAMBIA PROFILO';
+    updateHeaderBadge();
+    requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+   }, 300);
+  });
+ }
+
+ document.querySelectorAll('[data-profile]').forEach(button => {
+  button.addEventListener('click', () => selectProfile(button.dataset.profile));
+ });
+
+ if (changeProfile) changeProfile.addEventListener('click', showProfileHome);
+ const educatorBack = document.getElementById('educatorBack');
+ if (educatorBack) educatorBack.addEventListener('click', showProfileHome);
+ const loginBack = document.getElementById('loginBack');
+ if (loginBack) loginBack.addEventListener('click', showProfileHome);
+ if (revokeClearanceBtn) revokeClearanceBtn.addEventListener('click', logoutOperator);
+
+ // All'avvio mostra sempre la scelta del profilo
+ showProfileHome();
+})();
+</script>
+
+</body>
+</html>

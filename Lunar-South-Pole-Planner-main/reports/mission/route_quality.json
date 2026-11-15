@@ -1,0 +1,27 @@
+{
+  "schema": "lunar-rover-route-quality/1.0",
+  "status": "diagnostic_only",
+  "generated_utc": "2026-10-27T17:42:02.554297+00:00",
+  "path_cells": 22,
+  "path_segments": 21,
+  "pixel_size_x_m": 5.0,
+  "pixel_size_y_m": 5.0,
+  "distance_m": 133.99494936611666,
+  "start_elevation_m": -123.6444091796875,
+  "end_elevation_m": -159.81996154785156,
+  "net_elevation_change_m": -36.17555236816406,
+  "cumulative_ascent_m": 0.0,
+  "cumulative_descent_m": 36.17555236816406,
+  "slope_median_deg": 16.815512671398068,
+  "slope_p95_deg": 19.626997626875436,
+  "slope_max_deg": 19.799291107416934,
+  "max_edge_grade_deg": 18.807815171862288,
+  "valid_path_cell_fraction": 1.0,
+  "warnings": [
+    "Metriche diagnostiche: non certificano la sicurezza o la percorribilità.",
+    "La pendenza è stimata dal DEM; non include incertezza altimetrica.",
+    "Le stime non modellano slittamento, ostacoli, dinamica o limiti meccanici."
+  ],
+  "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "route_plan_path": "reports/mission/rover_plan.json"
+}

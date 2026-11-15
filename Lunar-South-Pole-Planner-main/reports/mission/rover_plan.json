@@ -1,0 +1,103 @@
+{
+  "path_rc": [
+    [
+      120,
+      113
+    ],
+    [
+      119,
+      113
+    ],
+    [
+      118,
+      113
+    ],
+    [
+      117,
+      113
+    ],
+    [
+      116,
+      114
+    ],
+    [
+      115,
+      114
+    ],
+    [
+      114,
+      114
+    ],
+    [
+      113,
+      113
+    ],
+    [
+      112,
+      113
+    ],
+    [
+      111,
+      112
+    ],
+    [
+      111,
+      111
+    ],
+    [
+      110,
+      110
+    ],
+    [
+      109,
+      109
+    ],
+    [
+      108,
+      108
+    ],
+    [
+      107,
+      107
+    ],
+    [
+      106,
+      106
+    ],
+    [
+      105,
+      105
+    ],
+    [
+      104,
+      104
+    ],
+    [
+      103,
+      103
+    ],
+    [
+      102,
+      102
+    ],
+    [
+      101,
+      101
+    ],
+    [
+      100,
+      100
+    ]
+  ],
+  "distance_m": 133.99494936611666,
+  "estimated_energy_wh": 2.6798989873223333,
+  "max_slope_deg": 19.799291107416934,
+  "cells_expanded": 558,
+  "status": "preliminary",
+  "warning": "Pianificazione preliminare su DEM. Energia = distanza x consumo costante; non include massa, pendenza energetica, slittamento, ruote, temperatura, incertezza DEM o dinamica del rover. Frame geodetico non validato.",
+  "schema": "lunar-rover-route-plan/1.0",
+  "dem_path": "data/terrain/official-lola/Site04_final_adj_5mpp_surf.tif",
+  "generated_utc": "2026-10-27T17:42:02.292820+00:00",
+  "pixel_size_x_m": 5.0,
+  "pixel_size_y_m": 5.0
+}

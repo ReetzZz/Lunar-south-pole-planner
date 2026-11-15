@@ -1,0 +1,33 @@
+{
+  "schema": "lunar-mission-orchestration/1.0",
+  "run_id": "95ef6e7b-46c9-4c54-8d18-91de349c59bf",
+  "generated_utc": "2026-10-28T00:14:03.328363+00:00",
+  "status": "completed_preliminary",
+  "configuration": ".mission_audit_20261028.json",
+  "steps": {
+    "descent_hazard_detection": {
+      "status": "success",
+      "result": {
+        "decision": "EVITARE",
+        "decision_reasons": [
+          "Pendenza 23.173° oltre soglia 15.000°.",
+          "Rugosità proxy 14.998 m oltre soglia 1.000 m."
+        ],
+        "coverage_fraction": 1.0,
+        "report_file": "reports/mission/audit-run-20261028-001/descent_hazard_report.json",
+        "status": "preliminary"
+      }
+    }
+  },
+  "artifacts": {
+    "descent_hazard_detection": "reports/mission/audit-run-20261028-001/descent_hazard_report.json",
+    "mission_status_json": "reports/mission/audit-run-20261028-001/mission_status_report.json",
+    "mission_status_markdown": "reports/mission/audit-run-20261028-001/mission_status_report.md"
+  },
+  "warnings": [
+    "Risultati preliminari, non certificati per operazioni reali.",
+    "Georeferenziazione e frame fisico lunare non validati indipendentemente.",
+    "L'allocazione multi-rover usa distanze euclidee, non percorsi DEM.",
+    "Il journal è locale e non si connette a nodi P-System remoti."
+  ]
+}
